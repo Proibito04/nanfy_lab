@@ -18,27 +18,27 @@ export function Hero() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div className="inline-block px-4 py-2 rounded-full text-sm" style={{ backgroundColor: 'var(--green-lighter)', color: 'var(--green-primary)' }}>
+            <div className="inline-block px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: 'var(--amber-lighter)', color: 'var(--amber-primary)' }}>
               Accademia Culinaria Professionale
             </div>
-            <h1 className="text-5xl md:text-6xl tracking-tight">
-              L'Arte della <span style={{ color: 'var(--green-primary)' }}>Cucina Italiana</span>
+            <h1 className="text-5xl md:text-7xl leading-tight">
+              L'Emozione della <br /><span className="italic" style={{ color: 'var(--amber-primary)' }}>Cucina Italiana</span>
             </h1>
             <p className="text-lg text-gray-600 leading-relaxed">
               Impara dallo Chef Giacomo Nanfaro, maestro della gastronomia italiana contemporanea. 
               Scopri i segreti dei piatti signature e porta le tue abilità culinarie a un nuovo livello.
             </p>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4 pt-4">
               <button 
-                className="px-8 py-3 rounded-full text-white transition-all hover:opacity-90"
-                style={{ backgroundColor: 'var(--green-primary)' }}
+                className="px-10 py-4 rounded-full text-white font-semibold transition-all hover:shadow-xl hover:-translate-y-1 active:scale-95"
+                style={{ backgroundColor: 'var(--amber-primary)' }}
                 onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Scopri i Corsi
+                Inizia ora
               </button>
               <button 
-                className="px-8 py-3 rounded-full border-2 transition-all hover:bg-gray-50"
-                style={{ borderColor: 'var(--green-primary)', color: 'var(--green-primary)' }}
+                className="px-10 py-4 rounded-full border-2 font-semibold transition-all hover:bg-white/50 active:scale-95"
+                style={{ borderColor: 'var(--amber-primary)', color: 'var(--amber-primary)' }}
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Scopri di Più

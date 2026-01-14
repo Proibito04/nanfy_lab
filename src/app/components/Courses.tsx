@@ -91,7 +91,7 @@ export function Courses() {
           {serviceCategories.map((category, catIndex) => (
             <div key={catIndex} className="space-y-8">
               <div className="flex items-center gap-4 mb-2">
-                <div className="p-3 rounded-2xl" style={{ backgroundColor: 'var(--green-lighter)', color: 'var(--green-primary)' }}>
+                <div className="p-3 rounded-2xl" style={{ backgroundColor: 'var(--amber-lighter)', color: 'var(--amber-primary)' }}>
                   {category.icon}
                 </div>
                 <h3 className="text-xl font-bold tracking-tight">{category.title}</h3>
@@ -101,10 +101,10 @@ export function Courses() {
                 {category.items.map((item, itemIndex) => (
                   <div 
                     key={itemIndex} 
-                    className="group p-6 rounded-2xl border border-gray-100 bg-gray-50/50 hover:bg-white hover:shadow-xl hover:border-transparent transition-all duration-300"
+                    className="group p-6 rounded-2xl border border-amber-100 bg-white hover:shadow-2xl hover:border-amber-200 transition-all duration-500"
                   >
                     <div className="flex items-start gap-4">
-                      <div className="mt-1 p-2 rounded-lg bg-white shadow-sm group-hover:scale-110 transition-transform duration-300" style={{ color: 'var(--green-primary)' }}>
+                      <div className="mt-1 p-2 rounded-lg bg-amber-50 group-hover:scale-110 transition-transform duration-300" style={{ color: 'var(--amber-primary)' }}>
                         {item.icon}
                       </div>
                       <div>

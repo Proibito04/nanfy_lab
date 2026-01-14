@@ -25,9 +25,9 @@ export function About() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
-            <div className="w-14 h-14 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: 'var(--green-lighter)' }}>
-              <ChefHat className="w-7 h-7" style={{ color: 'var(--green-primary)' }} />
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-amber-50 hover:shadow-md transition-shadow">
+            <div className="w-14 h-14 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: 'var(--amber-lighter)' }}>
+              <ChefHat className="w-7 h-7" style={{ color: 'var(--amber-primary)' }} />
             </div>
             <h3 className="text-xl mb-3">Insegnamento Esperto</h3>
             <p className="text-gray-600">
@@ -35,9 +35,9 @@ export function About() {
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
-            <div className="w-14 h-14 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: 'var(--green-lighter)' }}>
-              <Award className="w-7 h-7" style={{ color: 'var(--green-primary)' }} />
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-amber-50 hover:shadow-md transition-shadow">
+            <div className="w-14 h-14 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: 'var(--amber-lighter)' }}>
+              <Award className="w-7 h-7" style={{ color: 'var(--amber-primary)' }} />
             </div>
             <h3 className="text-xl mb-3">Tecniche Professionali</h3>
             <p className="text-gray-600">
@@ -45,9 +45,9 @@ export function About() {
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
-            <div className="w-14 h-14 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: 'var(--green-lighter)' }}>
-              <svg className="w-7 h-7" style={{ color: 'var(--green-primary)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-amber-50 hover:shadow-md transition-shadow">
+            <div className="w-14 h-14 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: 'var(--amber-lighter)' }}>
+              <svg className="w-7 h-7" style={{ color: 'var(--amber-primary)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
             </div>
@@ -81,11 +81,11 @@ export function About() {
               Tutto questo percorso è finalizzato alla creazione della struttura necessaria per arrivare all'apertura fisica del vero e proprio NANFY-LAB.
             </p>
             <button 
-              className="px-8 py-3 rounded-full text-white transition-all hover:opacity-90"
-              style={{ backgroundColor: 'var(--green-primary)' }}
+              className="px-10 py-4 rounded-full text-white font-semibold transition-all hover:shadow-xl hover:-translate-y-1 active:scale-95"
+              style={{ backgroundColor: 'var(--amber-primary)' }}
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Unisciti alla Nostra Accademia
+              Scopri la Nostra Visione
             </button>
           </div>
         </div>

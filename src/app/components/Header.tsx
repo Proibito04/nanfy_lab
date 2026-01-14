@@ -51,7 +51,7 @@ export function Header() {
                 <button
                   key={item.label}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-gray-700 hover:text-green-600 transition-colors"
+                  className="text-gray-700 hover:text-amber-600 transition-colors"
                 >
                   {item.label}
                 </button>
@@ -59,8 +59,8 @@ export function Header() {
             </nav>
 
             <button 
-              className="hidden md:block px-6 py-2 rounded-full text-white transition-all hover:opacity-90"
-              style={{ backgroundColor: 'var(--green-primary)' }}
+              className="hidden md:block px-6 py-2 rounded-full text-white transition-all hover:shadow-lg hover:-translate-y-0.5"
+              style={{ backgroundColor: 'var(--amber-primary)' }}
               onClick={() => handleNavClick('#contact')}
             >
               Iscriviti Ora
@@ -73,9 +73,9 @@ export function Header() {
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? (
-                <X className="w-6 h-6" style={{ color: 'var(--green-primary)' }} />
+                <X className="w-6 h-6" style={{ color: 'var(--amber-primary)' }} />
               ) : (
-                <Menu className="w-6 h-6" style={{ color: 'var(--green-primary)' }} />
+                <Menu className="w-6 h-6" style={{ color: 'var(--amber-primary)' }} />
               )}
             </button>
           </div>
@@ -98,7 +98,7 @@ export function Header() {
             ))}
             <button 
               className="w-full px-6 py-3 rounded-full text-white transition-all hover:opacity-90"
-              style={{ backgroundColor: 'var(--green-primary)' }}
+              style={{ backgroundColor: 'var(--amber-primary)' }}
               onClick={() => handleNavClick('#contact')}
             >
               Iscriviti Ora

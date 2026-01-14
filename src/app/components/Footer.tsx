@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <ChefHat className="w-6 h-6" style={{ color: 'var(--green-secondary)' }} />
+              <ChefHat className="w-6 h-6" style={{ color: 'var(--amber-secondary)' }} />
               <span className="text-xl">Nanfy_Lab</span>
             </div>
             <p className="text-gray-400 text-sm">
@@ -41,19 +41,19 @@ export function Footer() {
             <div className="flex gap-4">
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-[var(--green-primary)] transition-colors"
+                className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-[var(--amber-primary)] transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-[var(--green-primary)] transition-colors"
+                className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-[var(--amber-primary)] transition-colors"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-[var(--green-primary)] transition-colors"
+                className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-[var(--amber-primary)] transition-colors"
               >
                 <Mail className="w-5 h-5" />
               </a>

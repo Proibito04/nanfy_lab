@@ -44,8 +44,8 @@ export function Contact() {
               <h3 className="text-2xl mb-6">Informazioni di Contatto</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'var(--green-lighter)' }}>
-                    <Mail className="w-5 h-5" style={{ color: 'var(--green-primary)' }} />
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'var(--amber-lighter)' }}>
+                    <Mail className="w-5 h-5" style={{ color: 'var(--amber-primary)' }} />
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 mb-1">Email</p>
@@ -54,8 +54,8 @@ export function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'var(--green-lighter)' }}>
-                    <Phone className="w-5 h-5" style={{ color: 'var(--green-primary)' }} />
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'var(--amber-lighter)' }}>
+                    <Phone className="w-5 h-5" style={{ color: 'var(--amber-primary)' }} />
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 mb-1">Telefono</p>
@@ -64,8 +64,8 @@ export function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'var(--green-lighter)' }}>
-                    <MapPin className="w-5 h-5" style={{ color: 'var(--green-primary)' }} />
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'var(--amber-lighter)' }}>
+                    <MapPin className="w-5 h-5" style={{ color: 'var(--amber-primary)' }} />
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 mb-1">Sede</p>
@@ -95,7 +95,7 @@ export function Contact() {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[var(--green-primary)] transition-colors"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[var(--amber-primary)] focus:ring-2 focus:ring-[var(--amber-lighter)] transition-all"
                   placeholder="Il tuo nome"
                 />
               </div>
@@ -108,7 +108,7 @@ export function Contact() {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[var(--green-primary)] transition-colors"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[var(--amber-primary)] focus:ring-2 focus:ring-[var(--amber-lighter)] transition-all"
                   placeholder="tua.email@esempio.it"
                 />
               </div>
@@ -120,7 +120,7 @@ export function Contact() {
                   id="phone"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[var(--green-primary)] transition-colors"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[var(--amber-primary)] focus:ring-2 focus:ring-[var(--amber-lighter)] transition-all"
                   placeholder="+39 123 456 7890"
                 />
               </div>
@@ -132,7 +132,7 @@ export function Contact() {
                   id="course"
                   value={formData.course}
                   onChange={(e) => setFormData({ ...formData, course: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[var(--green-primary)] transition-colors"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[var(--amber-primary)] focus:ring-2 focus:ring-[var(--amber-lighter)] transition-all"
                   placeholder="Inserisci il nome del corso"
                 />
               </div>
@@ -145,15 +145,15 @@ export function Contact() {
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   required
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[var(--green-primary)] transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[var(--amber-primary)] focus:ring-2 focus:ring-[var(--amber-lighter)] transition-all resize-none"
                   placeholder="Raccontaci del tuo interesse per i nostri corsi..."
                 />
               </div>
 
-              <button
+                <button
                 type="submit"
-                className="w-full py-3 rounded-full text-white transition-all hover:opacity-90"
-                style={{ backgroundColor: 'var(--green-primary)' }}
+                className="w-full py-4 rounded-full text-white font-semibold transition-all hover:shadow-xl hover:-translate-y-1 active:scale-95"
+                style={{ backgroundColor: 'var(--amber-primary)' }}
               >
                 Invia Messaggio
               </button>

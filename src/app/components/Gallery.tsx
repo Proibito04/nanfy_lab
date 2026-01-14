@@ -22,7 +22,7 @@ const dishes = [
 
 export function Gallery() {
   return (
-    <section id="gallery" className="py-20 px-6 bg-gray-50">
+    <section id="gallery" className="py-20 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl mb-4">Piatti Signature</h2>
@@ -40,10 +40,10 @@ export function Gallery() {
                   alt={dish.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-amber-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-              <h3 className="text-xl mb-2">{dish.title}</h3>
-              <p className="text-gray-600">{dish.description}</p>
+              <h3 className="text-xl mb-2 font-serif font-bold">{dish.title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{dish.description}</p>
             </div>
           ))}
         </div>
