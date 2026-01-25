@@ -15,12 +15,11 @@ export function Header() {
   }, []);
 
   const navItems = [
-    { label: 'Corso di cucina', href: '#courses' },
-    { label: 'Cene private', href: '#courses' },
-    { label: 'Calendario', href: '#calendar' },
+    { label: 'Servizi', href: '#courses' },
+    { label: 'Lo Chef', href: '#chef-bio' },
     { label: 'Chi Siamo', href: '#about' },
+    { label: 'Contatti', href: '#contact' },
     { label: 'Galleria', href: '#gallery' },
-    { label: 'Contatti', href: '#contact' }
   ];
 
   const handleNavClick = (href: string) => {
