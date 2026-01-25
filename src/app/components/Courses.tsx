@@ -1,122 +1,137 @@
 import { ChefHat, Utensils, Briefcase, Play, Home, MapPin, Truck, Users, ShoppingBag, MessageSquare, GraduationCap } from 'lucide-react';
 
-const serviceCategories = [
+import cookingClassImg from "@assets/service_cooking_class.png";
+import privateDinnerImg from "@assets/service_private_dinner.png";
+import kidsPartyImg from "@assets/service_kids_party.png";
+import cateringImg from "@assets/gourmet_catering_exclusive_1767972610833.png";
+import consultancyImg from "@assets/service_consultancy.png";
+import merchandisingImg from "@assets/service_merchandising.png";
+import videoCoursesImg from "@assets/service_video_courses.png";
+import kitchenStudioImg from "@assets/modern_professional_kitchen_studio_1767972592261.png";
+import homeChefImg from "@assets/private_dinner_home_chef_1767972575839.png";
+import pastaMakingImg from "@assets/pasta_making_workshop_1767972558943.png";
+
+const activeServices = [
   {
-    title: "1. CORSI E FORMAZIONE",
-    icon: <ChefHat className="w-8 h-8" />,
-    items: [
-      {
-        title: "Corsi a domicilio",
-        description: "Lezioni private presso il cliente per un'esperienza personalizzata.",
-        icon: <Home className="w-5 h-5" />
-      },
-      {
-        title: "Corsi Home Lab",
-        description: "Corsi organizzati nel proprio spazio/laboratorio dedicato.",
-        icon: <ChefHat className="w-5 h-5" />
-      },
-      {
-        title: "Video corsi",
-        description: "Contenuti digitali e lezioni online accessibili ovunque.",
-        icon: <Play className="w-5 h-5" />
-      }
-    ]
+    title: "Corsi Home Lab",
+    description: "Corsi organizzati nel nostro laboratorio dedicato per un'esperienza immersiva.",
+    icon: <ChefHat className="w-6 h-6" />,
+    image: cookingClassImg
   },
   {
-    title: "2. RISTORAZIONE ED EVENTI",
-    icon: <Utensils className="w-8 h-8" />,
-    items: [
-      {
-        title: "Cene e feste a domicilio",
-        description: "Servizio chef per privati, portando l'alta cucina a casa vostra.",
-        icon: <Home className="w-5 h-5" />
-      },
-      {
-        title: "Cene Home Lab",
-        description: "Esperienze gastronomiche intime nel proprio spazio.",
-        icon: <ChefHat className="w-5 h-5" />
-      },
-      {
-        title: "Cene in Location",
-        description: "Eventi in collaborazione con spazi esterni e location esclusive.",
-        icon: <MapPin className="w-5 h-5" />
-      },
-      {
-        title: "Catering",
-        description: "Servizio professionale per eventi e cerimonie di ogni tipo.",
-        icon: <Truck className="w-5 h-5" />
-      }
-    ]
+    title: "Cene Home Lab",
+    description: "Esperienze gastronomiche intime ed esclusive nel nostro spazio.",
+    icon: <Utensils className="w-6 h-6" />,
+    image: privateDinnerImg
   },
   {
-    title: "3. SVILUPPO BUSINESS E COLLABORAZIONI",
-    icon: <Briefcase className="w-8 h-8" />,
-    items: [
-      {
-        title: "Collaborazioni",
-        description: "Sinergie con altri professionisti, locali e aziende del settore.",
-        icon: <Users className="w-5 h-5" />
-      },
-      {
-        title: "Merchandising",
-        description: "Vendita di prodotti esclusivi a marchio NANFY_LAB.",
-        icon: <ShoppingBag className="w-5 h-5" />
-      },
-      {
-        title: "Consulenze",
-        description: "Supporto professionale strategico per il settore ristorazione.",
-        icon: <MessageSquare className="w-5 h-5" />
-      },
-      {
-        title: "Corsi Professionalizzanti",
-        description: "Formazione avanzata mirata all'inserimento lavorativo.",
-        icon: <GraduationCap className="w-5 h-5" />
-      }
-    ]
+    title: "Kids Party (Baby Lab)",
+    description: "Laboratori educativi e sicuri per i più piccoli: preparazione di tramezzini, profiterole e altro.",
+    icon: <Users className="w-6 h-6" />,
+    image: kidsPartyImg
+  },
+  {
+    title: "Corsi a domicilio",
+    description: "Lezioni private presso il cliente per un'esperienza personalizzata e comoda.",
+    icon: <Home className="w-6 h-6" />,
+    image: pastaMakingImg
+  },
+  {
+    title: "Cene e feste a domicilio",
+    description: "Servizio chef per privati, portando l'alta cucina direttamente a casa vostra.",
+    icon: <Home className="w-6 h-6" />,
+    image: homeChefImg
+  },
+  {
+    title: "Catering",
+    description: "Servizio professionale per eventi e cerimonie di ogni tipo, con menu personalizzati.",
+    icon: <Truck className="w-6 h-6" />,
+    image: cateringImg
+  },
+  {
+    title: "Cene in Location",
+    description: "Eventi in collaborazione con spazi esterni e location esclusive e suggestive.",
+    icon: <MapPin className="w-6 h-6" />,
+    image: kitchenStudioImg
   }
+];
+
+const wipServices = [
+  { title: "Video Corsi", icon: <Play className="w-5 h-5" />, image: videoCoursesImg },
+  { title: "Merchandising", icon: <ShoppingBag className="w-5 h-5" />, image: merchandisingImg },
+  { title: "Consulenze", icon: <MessageSquare className="w-5 h-5" />, image: consultancyImg },
+  { title: "Corsi Professionalizzanti", icon: <GraduationCap className="w-5 h-5" />, image: kitchenStudioImg }
 ];
 
 export function Courses() {
   return (
-    <section id="courses" className="py-24 px-6 bg-white">
+    <section id="courses" className="py-24 px-6 bg-amber-50/30 reveal">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">I Nostri Servizi</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Dalla formazione alla ristorazione d'eccellenza, fino allo sviluppo del business nel mondo del gusto.
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-serif mb-6">I Nostri Servizi</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Scopri le nostre attività principali e le novità in arrivo nel mondo Nanfy Lab.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
-          {serviceCategories.map((category, catIndex) => (
-            <div key={catIndex} className="space-y-8">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="p-3 rounded-2xl" style={{ backgroundColor: 'var(--amber-lighter)', color: 'var(--amber-primary)' }}>
-                  {category.icon}
+        {/* Active Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          {activeServices.map((service, index) => (
+            <div 
+              key={index} 
+              className="group bg-white rounded-3xl shadow-sm border border-amber-100 overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer animate-fade-in-up"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <div className="aspect-video overflow-hidden relative">
+                <img 
+                  src={service.image} 
+                  alt={service.title} 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                />
+                <div className="absolute top-4 left-4 p-3 rounded-2xl bg-white/90 backdrop-blur-sm shadow-sm" style={{ color: 'var(--amber-primary)' }}>
+                  {service.icon}
                 </div>
-                <h3 className="text-xl font-bold tracking-tight">{category.title}</h3>
               </div>
-              
-              <div className="grid gap-6">
-                {category.items.map((item, itemIndex) => (
-                  <div 
-                    key={itemIndex} 
-                    className="group p-6 rounded-2xl border border-amber-100 bg-white hover:shadow-2xl hover:border-amber-200 transition-all duration-500"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="mt-1 p-2 rounded-lg bg-amber-50 group-hover:scale-110 transition-transform duration-300" style={{ color: 'var(--amber-primary)' }}>
-                        {item.icon}
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold mb-2">{item.title}</h4>
-                        <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+              <div className="p-8">
+                <h3 className="text-2xl font-serif mb-4">{service.title}</h3>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  {service.description}
+                </p>
+                <button 
+                  className="text-sm font-bold uppercase tracking-wider flex items-center gap-2 transition-colors hover:gap-3"
+                  style={{ color: 'var(--amber-primary)' }}
+                >
+                  Scopri di più <span className="text-xl">→</span>
+                </button>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* WIP Services Section */}
+        <div className="border-t border-amber-100 pt-16">
+          <h3 className="text-center text-2xl font-serif mb-12 text-gray-500 italic">Prossimamente</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {wipServices.map((service, index) => (
+              <div 
+                key={index} 
+                className="relative bg-white rounded-2xl border border-dashed border-amber-200 overflow-hidden cursor-not-allowed group transition-all duration-500"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover grayscale opacity-20" />
+                </div>
+                <div className="absolute inset-0 bg-white/40 flex flex-col items-center justify-center p-4">
+                  <div className="mb-2 text-gray-800 group-hover:scale-110 transition-transform">
+                    {service.icon}
+                  </div>
+                  <span className="text-sm font-bold text-gray-900 text-center uppercase tracking-wider">{service.title}</span>
+                </div>
+                <span className="absolute top-2 right-2 bg-amber-200 text-amber-900 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-tighter shadow-sm">
+                  Prossimamente
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

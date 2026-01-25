@@ -13,12 +13,11 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     alert('Grazie per il tuo interesse! Ti contatteremo presto.');
   };
 
   return (
-    <section id="contact" className="py-20 px-6 relative overflow-hidden">
+    <section id="contact" className="py-20 px-6 relative overflow-hidden reveal">
       {/* Nature Background */}
       <div 
         className="absolute inset-0 opacity-8 pointer-events-none"
@@ -69,7 +68,16 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 mb-1">Sede</p>
-                    <p>Milano, Italia</p>
+                    <p className="mb-2">Milano, Italia</p>
+                    <a 
+                      href="https://maps.google.com/?q=Nanfy+Lab+Milano" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-sm font-bold flex items-center gap-1 hover:underline"
+                      style={{ color: 'var(--amber-primary)' }}
+                    >
+                      Vedi su Google Maps <span>↗</span>
+                    </a>
                   </div>
                 </div>
               </div>

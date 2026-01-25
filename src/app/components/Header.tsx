@@ -15,14 +15,19 @@ export function Header() {
   }, []);
 
   const navItems = [
-    { label: 'Home', href: '#home' },
+    { label: 'Corso di cucina', href: '#courses' },
+    { label: 'Cene private', href: '#courses' },
+    { label: 'Calendario', href: '#calendar' },
     { label: 'Chi Siamo', href: '#about' },
-    { label: 'Servizi', href: '#courses' },
     { label: 'Galleria', href: '#gallery' },
     { label: 'Contatti', href: '#contact' }
   ];
 
   const handleNavClick = (href: string) => {
+    if (href === '#purchase') {
+      alert('🛒 Carrello: Il corso è stato aggiunto! Procedi al pagamento sicuro (Mock).');
+      return;
+    }
     const element = document.querySelector(href);
     element?.scrollIntoView({ behavior: 'smooth' });
     setIsMobileMenuOpen(false);
@@ -61,9 +66,9 @@ export function Header() {
             <button 
               className="hidden md:block px-6 py-2 rounded-full text-white transition-all hover:shadow-lg hover:-translate-y-0.5"
               style={{ backgroundColor: 'var(--amber-primary)' }}
-              onClick={() => handleNavClick('#contact')}
+              onClick={() => handleNavClick('#purchase')}
             >
-              Iscriviti Ora
+              Acquista un corso
             </button>
 
             {/* Mobile Menu Button */}
@@ -99,9 +104,9 @@ export function Header() {
             <button 
               className="w-full px-6 py-3 rounded-full text-white transition-all hover:opacity-90"
               style={{ backgroundColor: 'var(--amber-primary)' }}
-              onClick={() => handleNavClick('#contact')}
+              onClick={() => handleNavClick('#purchase')}
             >
-              Iscriviti Ora
+              Acquista un corso
             </button>
           </nav>
         </div>

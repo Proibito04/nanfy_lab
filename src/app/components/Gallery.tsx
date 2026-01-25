@@ -22,7 +22,7 @@ const dishes = [
 
 export function Gallery() {
   return (
-    <section id="gallery" className="py-20 px-6 bg-white">
+    <section id="gallery" className="py-20 px-6 bg-white reveal">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl mb-4">Piatti Signature</h2>
