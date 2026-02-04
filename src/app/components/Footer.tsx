@@ -9,10 +9,10 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <ChefHat className="w-6 h-6" style={{ color: 'var(--amber-secondary)' }} />
-              <span className="text-xl">Nanfy_Lab</span>
+              <span className="text-xl">Nanfylab</span>
             </div>
             <p className="text-gray-400 text-sm">
-              Accademia culinaria professionale dedicata all'eccellenza della gastronomia italiana.
+              Esperienze culinarie e convivialità nel mondo Nanfylab.
             </p>
           </div>
 
@@ -20,19 +20,19 @@ export function Footer() {
             <h4 className="mb-4">Link Rapidi</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><a href="#about" className="hover:text-white transition-colors">Chi Siamo</a></li>
-              <li><a href="#courses" className="hover:text-white transition-colors">Corsi</a></li>
+              <li><a href="#courses" className="hover:text-white transition-colors">Servizi</a></li>
               <li><a href="#gallery" className="hover:text-white transition-colors">Galleria</a></li>
               <li><a href="#contact" className="hover:text-white transition-colors">Contatti</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="mb-4">Corsi</h4>
+            <h4 className="mb-4">Servizi</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#courses" className="hover:text-white transition-colors">Corsi Base</a></li>
-              <li><a href="#courses" className="hover:text-white transition-colors">Formazione Avanzata</a></li>
-              <li><a href="#courses" className="hover:text-white transition-colors">Lezioni Private</a></li>
-              <li><a href="#courses" className="hover:text-white transition-colors">Workshop</a></li>
+              <li><a href="#courses" className="hover:text-white transition-colors">Corsi a domicilio</a></li>
+              <li><a href="#courses" className="hover:text-white transition-colors">Cene in lab</a></li>
+              <li><a href="#courses" className="hover:text-white transition-colors">Kids Party</a></li>
+              <li><a href="#courses" className="hover:text-white transition-colors">Catering</a></li>
             </ul>
           </div>
 
@@ -62,7 +62,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
-          <p>&copy; 2024 Nanfy_Lab Academy. All rights reserved.</p>
+          <p>&copy; 2024 Nanfylab. All rights reserved.</p>
         </div>
       </div>
     </footer>

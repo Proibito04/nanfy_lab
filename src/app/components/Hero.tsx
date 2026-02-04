@@ -18,12 +18,17 @@ export function Hero() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in-up">
-            <div className="inline-block px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: 'var(--amber-lighter)', color: 'var(--amber-primary)' }}>
-              Accademia Culinaria Professionale
-            </div>
+            {/* <div className="inline-block px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: 'var(--amber-lighter)', color: 'var(--amber-primary)' }}>
+              Nanfylab
+            </div> */}
             <h1 className="text-5xl md:text-7xl leading-tight font-serif">
-              L'Emozione della <br /><span className="italic" style={{ color: 'var(--amber-primary)' }}>Cucina Italiana</span>
+              L'Emozione di <br /><span className="italic" style={{ color: 'var(--amber-primary)' }}>Nanfylab</span>
             </h1>
+            <div className="flex gap-4 text-gray-500 font-medium tracking-wide uppercase text-sm">
+              <span>- cucina</span>
+              <span>- convivialità</span>
+              <span>- passione</span>
+            </div>
             <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
               Esperienze culinarie esclusive guidate dallo Chef Giacomo Nanfaro.
             </p>
@@ -57,13 +62,6 @@ export function Hero() {
             </form>
 
             <div className="flex flex-wrap gap-4 pt-2">
-              <button 
-                className="px-8 py-4 rounded-full border-2 font-semibold transition-all hover:bg-white/50 active:scale-95"
-                style={{ borderColor: 'var(--amber-primary)', color: 'var(--amber-primary)' }}
-                onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Esplora i Corsi
-              </button>
             </div>
           </div>
           

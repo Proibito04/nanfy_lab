@@ -67,7 +67,7 @@ export function Header() {
               style={{ backgroundColor: 'var(--amber-primary)' }}
               onClick={() => handleNavClick('#purchase')}
             >
-              Acquista un corso
+              Acquista un servizio
             </button>
 
             {/* Mobile Menu Button */}
@@ -105,7 +105,7 @@ export function Header() {
               style={{ backgroundColor: 'var(--amber-primary)' }}
               onClick={() => handleNavClick('#purchase')}
             >
-              Acquista un corso
+              Acquista un servizio
             </button>
           </nav>
         </div>

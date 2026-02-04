@@ -48,7 +48,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 mb-1">Email</p>
-                    <p>info@nanfylab.academy</p>
+                    <p>info@nanfylab.com</p>
                   </div>
                 </div>
 

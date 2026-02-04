@@ -25,7 +25,7 @@ export function Gallery() {
     <section id="gallery" className="py-20 px-6 bg-white reveal">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl mb-4">Piatti Signature</h2>
+          <h2 className="text-4xl mb-4">Il mondo Nanfylab</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Esplora le creazioni più celebri dello Chef Giacomo
           </p>

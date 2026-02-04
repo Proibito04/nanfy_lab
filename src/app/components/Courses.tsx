@@ -13,13 +13,13 @@ import pastaMakingImg from "@assets/pasta_making_workshop_1767972558943.png";
 
 const activeServices = [
   {
-    title: "Corsi Home Lab",
-    description: "Corsi organizzati nel nostro laboratorio dedicato per un'esperienza immersiva.",
-    icon: <ChefHat className="w-6 h-6" />,
-    image: cookingClassImg
+    title: "Corsi a domicilio",
+    description: "Lezioni private presso il cliente per un'esperienza personalizzata e comoda.",
+    icon: <Home className="w-6 h-6" />,
+    image: pastaMakingImg
   },
   {
-    title: "Cene Home Lab",
+    title: "Cene in lab",
     description: "Esperienze gastronomiche intime ed esclusive nel nostro spazio.",
     icon: <Utensils className="w-6 h-6" />,
     image: privateDinnerImg
@@ -29,12 +29,6 @@ const activeServices = [
     description: "Laboratori educativi e sicuri per i più piccoli: preparazione di tramezzini, profiterole e altro.",
     icon: <Users className="w-6 h-6" />,
     image: kidsPartyImg
-  },
-  {
-    title: "Corsi a domicilio",
-    description: "Lezioni private presso il cliente per un'esperienza personalizzata e comoda.",
-    icon: <Home className="w-6 h-6" />,
-    image: pastaMakingImg
   },
   {
     title: "Cene e feste a domicilio",
@@ -57,6 +51,7 @@ const activeServices = [
 ];
 
 const wipServices = [
+  { title: "Corsi Home Lab", icon: <ChefHat className="w-5 h-5" />, image: cookingClassImg },
   { title: "Video Corsi", icon: <Play className="w-5 h-5" />, image: videoCoursesImg },
   { title: "Merchandising", icon: <ShoppingBag className="w-5 h-5" />, image: merchandisingImg },
   { title: "Consulenze", icon: <MessageSquare className="w-5 h-5" />, image: consultancyImg },
