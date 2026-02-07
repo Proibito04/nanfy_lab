@@ -7,6 +7,7 @@ import { ChefBio } from './components/ChefBio';
 import { Gallery } from './components/Gallery';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { Toaster } from './components/ui/sonner';
 
 export default function App() {
   useEffect(() => {
@@ -40,6 +41,7 @@ export default function App() {
         <Gallery />
       </main>
       <Footer />
+      <Toaster position="top-center" />
     </div>
   );
 }

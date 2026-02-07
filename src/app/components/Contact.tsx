@@ -1,8 +1,10 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { useState } from 'react';
 import natureBackground from "@assets/1dc5f631f35b3a6d410673a2b209c76520a8df65.png";
+import { toast } from 'sonner';
 
 export function Contact() {
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,9 +13,40 @@ export function Contact() {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Grazie per il tuo interesse! Ti contatteremo presto.');
+    setLoading(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      console.log(data)
+
+      if (response.ok) {
+        toast.success(data.message || 'Messaggio inviato con successo!');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          course: '',
+          message: ''
+        });
+      } else {
+        toast.error(data.message || 'Errore durante l\'invio. Riprova più tardi.');
+      }
+    } catch (error) {
+      toast.error('Errore di connessione. Riprova più tardi.');
+      console.error('Submission error:', error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -160,10 +193,18 @@ export function Contact() {
 
                 <button
                 type="submit"
-                className="w-full py-4 rounded-full text-white font-semibold transition-all hover:shadow-xl hover:-translate-y-1 active:scale-95"
+                disabled={loading}
+                className={`w-full py-4 rounded-full text-white font-semibold transition-all hover:shadow-xl hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-2 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
                 style={{ backgroundColor: 'var(--amber-primary)' }}
               >
-                Invia Messaggio
+                {loading ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    Invio in corso...
+                  </>
+                ) : (
+                  'Invia Messaggio'
+                )}
               </button>
             </form>
           </div>
