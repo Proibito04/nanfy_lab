@@ -1,5 +1,7 @@
 import { Instagram, Facebook, Mail } from 'lucide-react';
 import { ChefHat } from 'lucide-react';
+import logo from "@assets/logo.png";
+
 
 export function Footer() {
   return (
@@ -8,7 +10,13 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <ChefHat className="w-6 h-6" style={{ color: 'var(--amber-secondary)' }} />
+              <div className="flex items-center space-x-3">
+              <img 
+                src={logo} 
+                alt="Nanfy_Lab Academy" 
+                className="h-10 w-auto"
+              />
+            </div>
               <span className="text-xl">Nanfylab</span>
             </div>
             <p className="text-gray-400 text-sm">

@@ -91,7 +91,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 mb-1">Telefono</p>
-                    <p>+39 123 456 7890</p>
+                    <p>+39 353 212 7987</p>
                   </div>
                 </div>
 
@@ -101,9 +101,9 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 mb-1">Sede</p>
-                    <p className="mb-2">Milano, Italia</p>
+                    <p className="mb-2">Torino, Italia</p>
                     <a 
-                      href="https://maps.google.com/?q=Nanfy+Lab+Milano" 
+                      href="https://maps.google.com/?q=Nanfy+Lab+Torino" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-sm font-bold flex items-center gap-1 hover:underline"
@@ -162,7 +162,7 @@ export function Contact() {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[var(--amber-primary)] focus:ring-2 focus:ring-[var(--amber-lighter)] transition-all"
-                  placeholder="+39 123 456 7890"
+                  placeholder="+39 353 212 7987"
                 />
               </div>
 

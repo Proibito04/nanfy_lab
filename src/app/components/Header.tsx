@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from "@assets/nanfy_lab_logo_1767972510172.png";
+import logo from "@assets/logo.png";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,7 +45,7 @@ export function Header() {
               <img 
                 src={logo} 
                 alt="Nanfy_Lab Academy" 
-                className="h-10 w-auto"
+                className="h-24 w-auto"
               />
             </div>
 
