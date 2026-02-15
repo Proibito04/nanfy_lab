@@ -17,10 +17,10 @@ export function Footer() {
                   className="h-10 w-auto"
                 />
               </div>
-              <span className="text-xl">Nanfylab</span>
+              <span className="text-xl">Nanfy Lab</span>
             </div>
             <p className="text-gray-400 text-sm">
-              Esperienze culinarie e convivialità nel mondo Nanfylab.
+              Esperienze culinarie e convivialità nel mondo Nanfy Lab.
             </p>
           </div>
 

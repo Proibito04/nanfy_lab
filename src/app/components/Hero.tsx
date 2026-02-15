@@ -19,7 +19,7 @@ export function Hero() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in-up">
             {/* <div className="inline-block px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: 'var(--amber-lighter)', color: 'var(--amber-primary)' }}>
-              Nanfylab
+              Nanfy Lab
             </div> */}
             <h1 className="text-5xl md:text-7xl leading-tight font-serif">
               <span className="italic" style={{ color: 'var(--amber-primary)' }}>Nanfy Lab</span>
@@ -48,7 +48,6 @@ export function Hero() {
                   required
                   defaultValue=""
                 >
-                  <option value="" disabled>Interessa a...</option>
                   <option value="private">Eventi privati</option>
                   <option value="courses">Corsi di cucina</option>
                 </select>

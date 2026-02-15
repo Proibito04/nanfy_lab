@@ -119,9 +119,9 @@ export function Contact() {
             <div className="pt-8 border-t border-gray-200">
               <h4 className="mb-4">Orari di ufficio/prenotazioni</h4>
               <div className="space-y-2 text-gray-600">
-                <p>Lunedì - Venerdì: 9:30 - 18:30</p>
-                <p>Sabato: 10:00 - 14:00</p>
-                <p>Domenica: Chiuso</p>
+                <p>Lunedì - Venerdì: 9:30 - 17:00</p>
+                {/* <p>Sabato: 10:00 - 14:00</p> */}
+                <p>Sabato e Domenica: Chiuso</p>
               </div>
             </div>
           </div>

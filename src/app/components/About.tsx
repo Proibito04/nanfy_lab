@@ -13,9 +13,9 @@ export function About() {
                 className="w-full h-full object-cover scale-110 hover:scale-100 transition-transform duration-700"
               />
             </div>
-            <div className="absolute -bottom-8 -right-8 bg-white p-8 rounded-2xl shadow-xl hidden lg:block">
+            {/* <div className="absolute -bottom-8 -right-8 bg-white p-8 rounded-2xl shadow-xl hidden lg:block">
               <p className="text-amber-600 font-serif text-2xl">Passione & <br />Tradizione</p>
-            </div>
+            </div> */}
           </div>
 
           <div className="space-y-8 animate-fade-in-right">

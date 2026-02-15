@@ -4,20 +4,20 @@ import dinnerImage from "@assets/private_dinner_home_chef_1767972575839.png";
 
 const dishes = [
   {
-    title: "Risotto Contemporaneo",
-    description: "La nostra interpretazione moderna del classico risotto",
-    image: risottoImage
-  },
-  {
-    title: "Cena Privata",
+    title: "Corsi",
     description: "Esperienze culinarie esclusive nell'intimità di casa",
     image: dinnerImage
   },
   {
-    title: "Pasta Fatta a Mano",
+    title: "Eventi privati",
     description: "L'arte della pasta fresca tramandata con passione",
     image: pastaImage
-  }
+  },
+    {
+    title: "Piatti",
+    description: "La nostra interpretazione moderna del classico risotto",
+    image: risottoImage
+  },
 ];
 
 export function Gallery() {
@@ -25,7 +25,7 @@ export function Gallery() {
     <section id="gallery" className="py-20 px-6 bg-white reveal">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl mb-4">Il mondo Nanfylab</h2>
+          <h2 className="text-4xl mb-4">Il mondo Nanfy Lab</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Esplora le creazioni più celebri dello Chef Giacomo
           </p>
