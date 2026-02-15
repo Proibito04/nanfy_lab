@@ -1,4 +1,4 @@
-import chefImage from "@assets/chef_portrait.png";
+import chefImage from "@assets/foto_jack.jpeg";
 import natureBackground from "@assets/lavender_field_texture_1767972628710.png";
 
 export function Hero() {
@@ -22,15 +22,16 @@ export function Hero() {
               Nanfylab
             </div> */}
             <h1 className="text-5xl md:text-7xl leading-tight font-serif">
-              L'Emozione di <br /><span className="italic" style={{ color: 'var(--amber-primary)' }}>Nanfylab</span>
+              <span className="italic" style={{ color: 'var(--amber-primary)' }}>Nanfy Lab</span>
             </h1>
             <div className="flex gap-4 text-gray-500 font-medium tracking-wide uppercase text-sm">
               <span>- cucina</span>
               <span>- convivialità</span>
+              <span>- cultura</span>
               <span>- passione</span>
             </div>
             <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
-              Esperienze culinarie esclusive guidate dallo Chef Giacomo Nanfaro.
+             Dove la cucina unisce le competenze tecniche ai valori, vivi un esperienza esclusiva guidata dallo Chef Giacomo Nanfaro.
             </p>
 
             {/* Lead Generation Form */}

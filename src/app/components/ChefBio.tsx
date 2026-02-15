@@ -30,19 +30,24 @@ export function ChefBio() {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-8 animate-fade-in-left">
-            <h2 className="text-4xl md:text-5xl font-serif">Lo Chef Giacomo Nanfaro</h2>
+            <h2 className="text-4xl md:text-5xl font-serif uppercase tracking-tighter">
+              <span className="block text-lg mb-2 text-amber-600 font-sans tracking-[0.2em]">Lo Chef</span>
+              <span className="whitespace-nowrap">Giacomo Nanfaro</span>
+            </h2>
             <div className="w-20 h-1 bg-amber-500 rounded-full"></div>
             <p className="text-xl text-gray-700 leading-relaxed font-light italic">
-              "La mia cucina è un viaggio tra memoria e innovazione. Ogni piatto racconta una storia di territorio, 
-              tradizione e ricerca costante della perfezione."
+              "La mia cucina è il connubio di tradizione, esperienze, passione e creatività, ricamata con
+              la consapevolezza dell'esperienza miscelata ad un pizzico di audacia che mi
+              contraddistingue. Il mio cavallo di battaglia? Lo scoprirai durante gli eventi che vivremo assieme"
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              Con oltre quindici anni di esperienza nell'alta ristorazione italiana, lo Chef Giacomo Nanfaro 
-              ha sviluppato un approccio unico che combina la rigorosità delle tecniche classiche con l'audacia 
-              delle combinazioni contemporanee.
+              Con esperienza ventennale nella ristorazione lo chef Giacomo Nanfaro ha sviluppato un
+              approccio unico alla cucina, unendo la comprovata efficacia delle tecniche classiche allo
+              studio approfondito di ogni sapore creando piatti di carattere e audaci nel pieno rispetto
+              di ogni materia prima.
             </p>
             <div className="pt-4">
-              <button 
+              <button
                 className="group px-8 py-4 rounded-full text-white font-semibold transition-all hover:shadow-2xl active:scale-95 flex items-center gap-2"
                 style={{ backgroundColor: 'var(--amber-primary)' }}
               >
@@ -55,14 +60,13 @@ export function ChefBio() {
             {/* Interactive Carousel */}
             <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl group">
               {signatureDishes.map((dish, index) => (
-                <div 
+                <div
                   key={index}
-                  className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-                    index === currentIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-110 pointer-events-none'
-                  }`}
+                  className={`absolute inset-0 transition-all duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-110 pointer-events-none'
+                    }`}
                 >
-                  <img 
-                    src={dish.img} 
+                  <img
+                    src={dish.img}
                     alt={dish.title}
                     className="w-full h-full object-cover"
                   />
@@ -74,13 +78,13 @@ export function ChefBio() {
               ))}
 
               {/* Navigation Arrows */}
-              <button 
+              <button
                 onClick={prevSlide}
                 className="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center hover:bg-white/40 transition-all opacity-0 group-hover:opacity-100"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
-              <button 
+              <button
                 onClick={nextSlide}
                 className="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center hover:bg-white/40 transition-all opacity-0 group-hover:opacity-100"
               >
@@ -93,9 +97,8 @@ export function ChefBio() {
                   <button
                     key={index}
                     onClick={() => setCurrentIndex(index)}
-                    className={`h-1.5 rounded-full transition-all ${
-                      index === currentIndex ? 'w-8 bg-amber-500' : 'w-2 bg-white/50 hover:bg-white'
-                    }`}
+                    className={`h-1.5 rounded-full transition-all ${index === currentIndex ? 'w-8 bg-amber-500' : 'w-2 bg-white/50 hover:bg-white'
+                      }`}
                   />
                 ))}
               </div>

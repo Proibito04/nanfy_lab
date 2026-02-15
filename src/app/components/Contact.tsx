@@ -52,7 +52,7 @@ export function Contact() {
   return (
     <section id="contact" className="py-20 px-6 relative overflow-hidden reveal">
       {/* Nature Background */}
-      <div 
+      <div
         className="absolute inset-0 opacity-8 pointer-events-none"
         style={{
           backgroundImage: `url(${natureBackground})`,
@@ -61,7 +61,7 @@ export function Contact() {
           backgroundRepeat: 'no-repeat'
         }}
       />
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl mb-4">Contattaci</h2>
@@ -102,9 +102,9 @@ export function Contact() {
                   <div>
                     <p className="text-sm text-gray-600 mb-1">Sede</p>
                     <p className="mb-2">Torino, Italia</p>
-                    <a 
-                      href="https://maps.google.com/?q=Nanfy+Lab+Torino" 
-                      target="_blank" 
+                    <a
+                      href="https://maps.google.com/?q=Nanfy+Lab+Torino"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm font-bold flex items-center gap-1 hover:underline"
                       style={{ color: 'var(--amber-primary)' }}
@@ -117,10 +117,10 @@ export function Contact() {
             </div>
 
             <div className="pt-8 border-t border-gray-200">
-              <h4 className="mb-4">Orari dell'Accademia</h4>
+              <h4 className="mb-4">Orari di ufficio/prenotazioni</h4>
               <div className="space-y-2 text-gray-600">
-                <p>Lunedì - Venerdì: 9:00 - 18:00</p>
-                <p>Sabato: 10:00 - 16:00</p>
+                <p>Lunedì - Venerdì: 9:30 - 18:30</p>
+                <p>Sabato: 10:00 - 14:00</p>
                 <p>Domenica: Chiuso</p>
               </div>
             </div>
@@ -191,7 +191,7 @@ export function Contact() {
                 />
               </div>
 
-                <button
+              <button
                 type="submit"
                 disabled={loading}
                 className={`w-full py-4 rounded-full text-white font-semibold transition-all hover:shadow-xl hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-2 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}

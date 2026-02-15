@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from "@assets/logo.png";
+import logo from "@assets/logo_senza_cerchio.png";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,17 +34,16 @@ export function Header() {
 
   return (
     <>
-      <header 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-white'
-        }`}
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-white'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <img 
-                src={logo} 
-                alt="Nanfy_Lab Academy" 
+              <img
+                src={logo}
+                alt="Nanfy_Lab Academy"
                 className="h-24 w-auto"
               />
             </div>
@@ -62,7 +61,7 @@ export function Header() {
               ))}
             </nav>
 
-            <button 
+            <button
               className="hidden md:block px-6 py-2 rounded-full text-white transition-all hover:shadow-lg hover:-translate-y-0.5"
               style={{ backgroundColor: 'var(--amber-primary)' }}
               onClick={() => handleNavClick('#purchase')}
@@ -100,7 +99,7 @@ export function Header() {
                 {item.label}
               </button>
             ))}
-            <button 
+            <button
               className="w-full px-6 py-3 rounded-full text-white transition-all hover:opacity-90"
               style={{ backgroundColor: 'var(--amber-primary)' }}
               onClick={() => handleNavClick('#purchase')}

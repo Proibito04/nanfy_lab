@@ -2,61 +2,45 @@ import { ChefHat, Utensils, Briefcase, Play, Home, MapPin, Truck, Users, Shoppin
 
 import cookingClassImg from "@assets/service_cooking_class.png";
 import privateDinnerImg from "@assets/service_private_dinner.png";
-import kidsPartyImg from "@assets/service_kids_party.png";
-import cateringImg from "@assets/gourmet_catering_exclusive_1767972610833.png";
-import consultancyImg from "@assets/service_consultancy.png";
-import merchandisingImg from "@assets/service_merchandising.png";
 import videoCoursesImg from "@assets/service_video_courses.png";
+import teamBuildingImg from "@assets/service_team_building.png";
+import productsImg from "@assets/service_products.png";
 import kitchenStudioImg from "@assets/modern_professional_kitchen_studio_1767972592261.png";
-import homeChefImg from "@assets/private_dinner_home_chef_1767972575839.png";
-import pastaMakingImg from "@assets/pasta_making_workshop_1767972558943.png";
 
 const activeServices = [
   {
-    title: "Corsi a domicilio",
-    description: "Lezioni private presso il cliente per un'esperienza personalizzata e comoda.",
-    icon: <Home className="w-6 h-6" />,
-    image: pastaMakingImg
+    title: "Corsi in lab",
+    description: "Lezioni di cucina nel nostro laboratorio per apprendere tecniche e segreti dai professionisti.",
+    icon: <ChefHat className="w-6 h-6" />,
+    image: kitchenStudioImg
   },
   {
     title: "Cene in lab",
-    description: "Esperienze gastronomiche intime ed esclusive nel nostro spazio.",
+    description: "Esperienze gastronomiche intime ed esclusive nel nostro spazio creativo.",
     icon: <Utensils className="w-6 h-6" />,
     image: privateDinnerImg
   },
   {
-    title: "Kids Party (Baby Lab)",
-    description: "Laboratori educativi e sicuri per i più piccoli: preparazione di tramezzini, profiterole e altro.",
-    icon: <Users className="w-6 h-6" />,
-    image: kidsPartyImg
+    title: "Team building",
+    description: "Attività di cucina per team aziendali che favoriscono la collaborazione e il divertimento.",
+    icon: <Briefcase className="w-6 h-6" />,
+    image: teamBuildingImg
   },
   {
-    title: "Cene e feste a domicilio",
-    description: "Servizio chef per privati, portando l'alta cucina direttamente a casa vostra.",
-    icon: <Home className="w-6 h-6" />,
-    image: homeChefImg
+    title: "Videocorsi",
+    description: "Impara la cucina professionale ovunque tu sia con i nostri corsi on-demand.",
+    icon: <Play className="w-6 h-6" />,
+    image: videoCoursesImg
   },
   {
-    title: "Catering",
-    description: "Servizio professionale per eventi e cerimonie di ogni tipo, con menu personalizzati.",
-    icon: <Truck className="w-6 h-6" />,
-    image: cateringImg
-  },
-  {
-    title: "Cene in Location",
-    description: "Eventi in collaborazione con spazi esterni e location esclusive e suggestive.",
-    icon: <MapPin className="w-6 h-6" />,
-    image: kitchenStudioImg
+    title: "Prodotti nanfy lab",
+    description: "Una selezione esclusiva di ingredienti e accessori firmati Nanfy Lab per la tua cucina.",
+    icon: <ShoppingBag className="w-6 h-6" />,
+    image: productsImg
   }
 ];
 
-const wipServices = [
-  { title: "Corsi Home Lab", icon: <ChefHat className="w-5 h-5" />, image: cookingClassImg },
-  { title: "Video Corsi", icon: <Play className="w-5 h-5" />, image: videoCoursesImg },
-  { title: "Merchandising", icon: <ShoppingBag className="w-5 h-5" />, image: merchandisingImg },
-  { title: "Consulenze", icon: <MessageSquare className="w-5 h-5" />, image: consultancyImg },
-  { title: "Corsi Professionalizzanti", icon: <GraduationCap className="w-5 h-5" />, image: kitchenStudioImg }
-];
+const wipServices: any[] = [];
 
 export function Courses() {
   return (
@@ -72,16 +56,16 @@ export function Courses() {
         {/* Active Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {activeServices.map((service, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="group bg-white rounded-3xl shadow-sm border border-amber-100 overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer animate-fade-in-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="aspect-video overflow-hidden relative">
-                <img 
-                  src={service.image} 
-                  alt={service.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute top-4 left-4 p-3 rounded-2xl bg-white/90 backdrop-blur-sm shadow-sm" style={{ color: 'var(--amber-primary)' }}>
                   {service.icon}
@@ -92,7 +76,7 @@ export function Courses() {
                 <p className="text-gray-600 leading-relaxed mb-6">
                   {service.description}
                 </p>
-                <button 
+                <button
                   className="text-sm font-bold uppercase tracking-wider flex items-center gap-2 transition-colors hover:gap-3"
                   style={{ color: 'var(--amber-primary)' }}
                 >
@@ -103,31 +87,32 @@ export function Courses() {
           ))}
         </div>
 
-        {/* WIP Services Section */}
-        <div className="border-t border-amber-100 pt-16">
-          <h3 className="text-center text-2xl font-serif mb-12 text-gray-500 italic">Prossimamente</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {wipServices.map((service, index) => (
-              <div 
-                key={index} 
-                className="relative bg-white rounded-2xl border border-dashed border-amber-200 overflow-hidden cursor-not-allowed group transition-all duration-500"
-              >
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img src={service.image} alt={service.title} className="w-full h-full object-cover grayscale opacity-20" />
-                </div>
-                <div className="absolute inset-0 bg-white/40 flex flex-col items-center justify-center p-4">
-                  <div className="mb-2 text-gray-800 group-hover:scale-110 transition-transform">
-                    {service.icon}
+        {wipServices.length > 0 && (
+          <div className="border-t border-amber-100 pt-16">
+            <h3 className="text-center text-2xl font-serif mb-12 text-gray-500 italic">Prossimamente</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {wipServices.map((service, index) => (
+                <div
+                  key={index}
+                  className="relative bg-white rounded-2xl border border-dashed border-amber-200 overflow-hidden cursor-not-allowed group transition-all duration-500"
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img src={service.image} alt={service.title} className="w-full h-full object-cover grayscale opacity-20" />
                   </div>
-                  <span className="text-sm font-bold text-gray-900 text-center uppercase tracking-wider">{service.title}</span>
+                  <div className="absolute inset-0 bg-white/40 flex flex-col items-center justify-center p-4">
+                    <div className="mb-2 text-gray-800 group-hover:scale-110 transition-transform">
+                      {service.icon}
+                    </div>
+                    <span className="text-sm font-bold text-gray-900 text-center uppercase tracking-wider">{service.title}</span>
+                  </div>
+                  <span className="absolute top-2 right-2 bg-amber-200 text-amber-900 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-tighter shadow-sm">
+                    Prossimamente
+                  </span>
                 </div>
-                <span className="absolute top-2 right-2 bg-amber-200 text-amber-900 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-tighter shadow-sm">
-                  Prossimamente
-                </span>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );

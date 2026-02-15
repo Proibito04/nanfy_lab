@@ -1,6 +1,6 @@
 import { Instagram, Facebook, Mail } from 'lucide-react';
 import { ChefHat } from 'lucide-react';
-import logo from "@assets/logo.png";
+import logo from "@assets/logo_senza_cerchio.png";
 
 
 export function Footer() {
@@ -11,12 +11,12 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="flex items-center space-x-3">
-              <img 
-                src={logo} 
-                alt="Nanfy_Lab Academy" 
-                className="h-10 w-auto"
-              />
-            </div>
+                <img
+                  src={logo}
+                  alt="Nanfy_Lab Academy"
+                  className="h-10 w-auto"
+                />
+              </div>
               <span className="text-xl">Nanfylab</span>
             </div>
             <p className="text-gray-400 text-sm">
@@ -37,30 +37,31 @@ export function Footer() {
           <div>
             <h4 className="mb-4">Servizi</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#courses" className="hover:text-white transition-colors">Corsi a domicilio</a></li>
+              <li><a href="#courses" className="hover:text-white transition-colors">Corsi in lab</a></li>
               <li><a href="#courses" className="hover:text-white transition-colors">Cene in lab</a></li>
-              <li><a href="#courses" className="hover:text-white transition-colors">Kids Party</a></li>
-              <li><a href="#courses" className="hover:text-white transition-colors">Catering</a></li>
+              <li><a href="#courses" className="hover:text-white transition-colors">Team building</a></li>
+              <li><a href="#courses" className="hover:text-white transition-colors">Videocorsi</a></li>
+              <li><a href="#courses" className="hover:text-white transition-colors">Prodotti nanfy lab</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="mb-4">Seguici</h4>
             <div className="flex gap-4">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-[var(--amber-primary)] transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-[var(--amber-primary)] transition-colors"
               >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-[var(--amber-primary)] transition-colors"
               >
                 <Mail className="w-5 h-5" />
