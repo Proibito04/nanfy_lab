@@ -1,4 +1,4 @@
-import { ChefHat, Utensils, Briefcase, Play, Home, MapPin, Truck, Users, ShoppingBag, MessageSquare, GraduationCap } from 'lucide-react';
+import { ChefHat, Utensils, Briefcase, Play, Home, MapPin, Truck, Users, ShoppingBag, MessageSquare, GraduationCap, FileText } from 'lucide-react';
 
 import cookingClassImg from "@assets/service_cooking_class.png";
 import privateDinnerImg from "@assets/service_private_dinner.png";
@@ -12,6 +12,9 @@ import consultancyImg from "@assets/service_consultancy.png";
 import merchandisingImg from "@assets/service_merchandising.png";
 import pastaMakingImg from "@assets/pasta_making_workshop_1767972558943.png";
 import homeChefImg from "@assets/private_dinner_home_chef_1767972575839.png";
+import menuBambini from "@assets/menu-bambini.pdf";
+import menuColazioneSabauda from "@assets/menu-colazione-sabauda.pdf";
+import menuMare from "@assets/menu-mare.pdf";
 
 
 const activeServices = [
@@ -37,7 +40,12 @@ const activeServices = [
     title: "Cene e feste a domicilio",
     description: "Servizio chef per privati, portando l'alta cucina direttamente a casa vostra.",
     icon: <Home className="w-6 h-6" />,
-    image: homeChefImg
+    image: homeChefImg,
+    menus: [
+      { name: "Menù Bambini", url: menuBambini },
+      { name: "Colazione Sabauda", url: menuColazioneSabauda },
+      { name: "Menù Mare", url: menuMare }
+    ]
   },
   {
     title: "Catering",
@@ -51,7 +59,7 @@ const activeServices = [
     icon: <MapPin className="w-6 h-6" />,
     image: kitchenStudioImg
   },
-    {
+  {
     title: "Team building",
     description: "Attività di cucina per team aziendali che favoriscono la collaborazione e il divertimento.",
     icon: <Briefcase className="w-6 h-6" />,
@@ -65,7 +73,7 @@ const wipServices = [
   { title: "Merchandising", icon: <ShoppingBag className="w-5 h-5" />, image: merchandisingImg },
   { title: "Consulenze", icon: <MessageSquare className="w-5 h-5" />, image: consultancyImg },
   { title: "Corsi Professionalizzanti", icon: <GraduationCap className="w-5 h-5" />, image: kitchenStudioImg },
-    {
+  {
     title: "Prodotti nanfy lab",
     description: "Una selezione esclusiva di ingredienti e accessori firmati Nanfy Lab per la tua cucina.",
     icon: <ShoppingBag className="w-6 h-6" />,
@@ -107,12 +115,30 @@ export function Courses() {
                 <p className="text-gray-600 leading-relaxed mb-6">
                   {service.description}
                 </p>
-                <button
-                  className="text-sm font-bold uppercase tracking-wider flex items-center gap-2 transition-colors hover:gap-3"
-                  style={{ color: 'var(--amber-primary)' }}
-                >
-                  Scopri di più <span className="text-xl">→</span>
-                </button>
+                <div className="flex flex-col gap-4">
+                  {'menus' in service && service.menus && (
+                    <div className="flex flex-wrap gap-2 mb-2">
+                      {(service.menus as { name: string, url: string }[]).map((menu, i) => (
+                        <a
+                          key={i}
+                          href={menu.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-50 text-amber-900 text-xs font-bold hover:bg-amber-100 transition-colors border border-amber-200"
+                        >
+                          <FileText size={14} />
+                          {menu.name}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                  <button
+                    className="text-sm font-bold uppercase tracking-wider flex items-center gap-2 transition-colors hover:gap-3"
+                    style={{ color: 'var(--amber-primary)' }}
+                  >
+                    Scopri di più <span className="text-xl">→</span>
+                  </button>
+                </div>
               </div>
             </div>
           ))}
