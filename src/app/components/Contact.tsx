@@ -102,7 +102,7 @@ export function Contact() {
                   <div>
                     <p className="text-sm text-gray-600 mb-1">Sede</p>
                     <p className="mb-2">Torino, Italia</p>
-                    <a
+                    {/* <a
                       href="https://maps.google.com/?q=Nanfy+Lab+Torino"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -110,7 +110,7 @@ export function Contact() {
                       style={{ color: 'var(--amber-primary)' }}
                     >
                       Vedi su Google Maps <span>↗</span>
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>

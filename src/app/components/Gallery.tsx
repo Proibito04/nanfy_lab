@@ -1,52 +1,37 @@
-import risottoImage from "@assets/gourmet_risotto_contemporary_1767972543080.png";
-import pastaImage from "@assets/pasta_making_giacomo.png";
-import dinnerImage from "@assets/private_dinner_home_chef_1767972575839.png";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
-const dishes = [
-  {
-    title: "Corsi",
-    description: "Esperienze culinarie esclusive nell'intimità di casa",
-    image: dinnerImage
-  },
-  {
-    title: "Eventi privati",
-    description: "L'arte della pasta fresca tramandata con passione",
-    image: pastaImage
-  },
-    {
-    title: "Piatti",
-    description: "La nostra interpretazione moderna del classico risotto",
-    image: risottoImage
-  },
-];
+// Recupera dinamicamente tutte le immagini dalla cartella galleria
+const imagesRecord = import.meta.glob('@assets/galleria/**/*.{jpg,JPG,jpeg,png,webp}', { eager: true, query: '?url', import: 'default' });
+const images = Object.values(imagesRecord) as string[];
 
 export function Gallery() {
   return (
     <section id="gallery" className="py-20 px-6 bg-white reveal">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl mb-4">Il mondo Nanfy Lab</h2>
+          <h2 className="text-4xl mb-4">La nostra galleria</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Esplora le creazioni più celebri dello Chef Giacomo
+            Esplora i momenti e le creazioni del mondo Nanfy Lab
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {dishes.map((dish, index) => (
-            <div key={index} className="group cursor-pointer">
-              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg mb-4">
-                <img 
-                  src={dish.image}
-                  alt={dish.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                  <div className="absolute inset-0 bg-gradient-to-t from-amber-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+          <Masonry gutter="16px">
+            {images.map((imgSrc, index) => (
+              <div key={index} className="group cursor-pointer">
+                <div className="relative rounded-2xl overflow-hidden shadow-lg mb-4">
+                  <img
+                    src={imgSrc}
+                    alt={`Galleria ${index + 1}`}
+                    loading="lazy"
+                    className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500 block"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-amber-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                </div>
               </div>
-              <h3 className="text-xl mb-2 font-serif font-bold">{dish.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{dish.description}</p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </Masonry>
+        </ResponsiveMasonry>
       </div>
     </section>
   );
