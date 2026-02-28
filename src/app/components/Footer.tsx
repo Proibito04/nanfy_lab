@@ -1,6 +1,7 @@
 import { Instagram, Facebook, Mail } from 'lucide-react';
 import { ChefHat } from 'lucide-react';
 import logo from "@assets/logo_senza_cerchio.png";
+import { Link } from 'react-router-dom';
 
 
 export function Footer() {
@@ -27,21 +28,21 @@ export function Footer() {
           <div>
             <h4 className="mb-4">Link Rapidi</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#about" className="hover:text-white transition-colors">Chi Siamo</a></li>
-              <li><a href="#courses" className="hover:text-white transition-colors">Servizi</a></li>
-              <li><a href="#gallery" className="hover:text-white transition-colors">Galleria</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">Contatti</a></li>
+              <li><a href="/#about" className="hover:text-white transition-colors">Chi Siamo</a></li>
+              <li><a href="/#courses" className="hover:text-white transition-colors">Servizi</a></li>
+              <li><Link to="/galleria" className="hover:text-white transition-colors">Galleria</Link></li>
+              <li><a href="/#contact" className="hover:text-white transition-colors">Contatti</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="mb-4">Servizi</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#courses" className="hover:text-white transition-colors">Corsi in lab</a></li>
-              <li><a href="#courses" className="hover:text-white transition-colors">Cene in lab</a></li>
-              <li><a href="#courses" className="hover:text-white transition-colors">Team building</a></li>
-              <li><a href="#courses" className="hover:text-white transition-colors">Videocorsi</a></li>
-              <li><a href="#courses" className="hover:text-white transition-colors">Prodotti nanfy lab</a></li>
+              <li><a href="/#courses" className="hover:text-white transition-colors">Corsi in lab</a></li>
+              <li><a href="/#courses" className="hover:text-white transition-colors">Cene in lab</a></li>
+              <li><a href="/#courses" className="hover:text-white transition-colors">Team building</a></li>
+              <li><a href="/#courses" className="hover:text-white transition-colors">Videocorsi</a></li>
+              <li><a href="/#courses" className="hover:text-white transition-colors">Prodotti nanfy lab</a></li>
             </ul>
           </div>
 
@@ -71,7 +72,10 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
-          <p>&copy; 2024 Nanfylab. All rights reserved.</p>
+          <p>
+            <strong>Chef Giacomo Giuseppe Nanfaro</strong> <br />
+            Ditta Individuale | P. IVA 13367390013 | C.F. NNFGMG89C18B563A
+          </p>
         </div>
       </div>
     </footer>

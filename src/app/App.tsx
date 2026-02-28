@@ -11,6 +11,8 @@ import { Footer } from './components/Footer';
 import { Toaster } from './components/ui/sonner';
 import { MenusPage } from './pages/MenusPage';
 import { HomeMenusSection } from './components/HomeMenusSection';
+import { GalleriaPage } from './pages/GalleriaPage';
+import { HomeGallerySection } from './components/HomeGallerySection';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -24,14 +26,14 @@ function ScrollToTop() {
 
 function HomePage() {
   return (
-    <main>
+    <main className='mt-20'>
       <Hero />
       <Courses />
       <HomeMenusSection />
       <ChefBio />
       <About />
       <Contact />
-      <Gallery />
+      <HomeGallerySection />
     </main>
   );
 }
@@ -68,12 +70,13 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/menus" element={<MenusPage />} />
+        <Route path="/galleria" element={<GalleriaPage />} />
       </Routes>
       <Footer />
       <Toaster position="top-center" />

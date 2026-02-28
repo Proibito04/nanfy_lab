@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import logo from "@assets/logo_senza_cerchio.png";
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,11 +19,11 @@ export function Header() {
 
   const navItems = [
     { label: 'Servizi', href: '#courses' },
-    { label: 'Menù', href: '#menus' },
+    { label: 'Menù', href: '/menus' },
     { label: 'Lo Chef', href: '#chef-bio' },
     { label: 'Chi Siamo', href: '#about' },
     { label: 'Contatti', href: '#contact' },
-    { label: 'Galleria', href: '#gallery' },
+    { label: 'Galleria', href: '/galleria' },
   ];
 
   const handleNavClick = (href: string) => {
@@ -28,6 +31,19 @@ export function Header() {
       alert('🛒 Carrello: Il corso è stato aggiunto! Procedi al pagamento sicuro (Mock).');
       return;
     }
+
+    if (href.startsWith('/')) {
+      navigate(href);
+      setIsMobileMenuOpen(false);
+      return;
+    }
+
+    if (location.pathname !== '/') {
+      navigate('/' + href);
+      setIsMobileMenuOpen(false);
+      return;
+    }
+
     const element = document.querySelector(href);
     element?.scrollIntoView({ behavior: 'smooth' });
     setIsMobileMenuOpen(false);
@@ -36,16 +52,16 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-white'
+        className={`h-28 flex items-center fixed top-0 left-0 right-0 z-50 transition-all duration-300  ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-white'
           }`}
       >
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
+        <div className=" mx-auto px-6 py-4">
+          <div className="flex items-center justify-between gap-10">
             <div className="flex items-center space-x-3">
               <img
                 src={logo}
                 alt="Nanfy_Lab Academy"
-                className="h-24 w-auto"
+                className="h-16 w-auto"
               />
             </div>
 
