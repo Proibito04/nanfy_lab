@@ -1,5 +1,5 @@
+import { Link } from 'react-router-dom';
 import { ChefHat, Utensils, Briefcase, Play, Home, MapPin, Truck, Users, ShoppingBag, MessageSquare, GraduationCap, FileText } from 'lucide-react';
-
 import cookingClassImg from "@assets/service_cooking_class.png";
 import privateDinnerImg from "@assets/service_private_dinner.png";
 import videoCoursesImg from "@assets/service_video_courses.png";
@@ -12,10 +12,6 @@ import consultancyImg from "@assets/service_consultancy.png";
 import merchandisingImg from "@assets/service_merchandising.png";
 import pastaMakingImg from "@assets/pasta_making_workshop_1767972558943.png";
 import homeChefImg from "@assets/private_dinner_home_chef_1767972575839.png";
-import menuBambini from "@assets/menu-bambini.pdf";
-import menuColazioneSabauda from "@assets/menu-colazione-sabauda.pdf";
-import menuMare from "@assets/menu-mare.pdf";
-
 
 const activeServices = [
   {
@@ -41,11 +37,7 @@ const activeServices = [
     description: "Servizio chef per privati, portando l'alta cucina direttamente a casa vostra.",
     icon: <Home className="w-6 h-6" />,
     image: homeChefImg,
-    menus: [
-      { name: "Menù Bambini", url: menuBambini },
-      { name: "Colazione Sabauda", url: menuColazioneSabauda },
-      { name: "Menù Mare", url: menuMare }
-    ]
+    hasMenusLink: true
   },
   {
     title: "Catering",
@@ -116,20 +108,15 @@ export function Courses() {
                   {service.description}
                 </p>
                 <div className="flex flex-col gap-4">
-                  {'menus' in service && service.menus && (
+                  {'hasMenusLink' in service && service.hasMenusLink && (
                     <div className="flex flex-wrap gap-2 mb-2">
-                      {(service.menus as { name: string, url: string }[]).map((menu, i) => (
-                        <a
-                          key={i}
-                          href={menu.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-50 text-amber-900 text-xs font-bold hover:bg-amber-100 transition-colors border border-amber-200"
-                        >
-                          <FileText size={14} />
-                          {menu.name}
-                        </a>
-                      ))}
+                      <Link
+                        to="/menus"
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-50 text-amber-900 text-sm font-bold hover:bg-amber-100 transition-colors border border-amber-200"
+                      >
+                        <FileText size={16} />
+                        Guarda i nostri menù
+                      </Link>
                     </div>
                   )}
                   <button

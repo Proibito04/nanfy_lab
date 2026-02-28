@@ -16,6 +16,7 @@ export function Header() {
 
   const navItems = [
     { label: 'Servizi', href: '#courses' },
+    { label: 'Menù', href: '#menus' },
     { label: 'Lo Chef', href: '#chef-bio' },
     { label: 'Chi Siamo', href: '#about' },
     { label: 'Contatti', href: '#contact' },
