@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ChefHat, Utensils, Briefcase, Play, Home, MapPin, Truck, Users, ShoppingBag, MessageSquare, GraduationCap, FileText } from 'lucide-react';
+import { ChefHat, Utensils, Briefcase, Play, Home, MapPin, Truck, Users, ShoppingBag, MessageSquare, GraduationCap } from 'lucide-react';
 import cookingClassImg from "@assets/service_cooking_class.png";
 import privateDinnerImg from "@assets/service_private_dinner.png";
 import videoCoursesImg from "@assets/service_video_courses.png";
@@ -37,7 +37,7 @@ const activeServices = [
     description: "Servizio chef per privati, portando l'alta cucina direttamente a casa vostra.",
     icon: <Home className="w-6 h-6" />,
     image: homeChefImg,
-    hasMenusLink: true
+    link: "/menus"
   },
   {
     title: "Catering",
@@ -86,49 +86,50 @@ export function Courses() {
 
         {/* Active Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {activeServices.map((service, index) => (
-            <div
-              key={index}
-              className="group bg-white rounded-3xl shadow-sm border border-amber-100 overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer animate-fade-in-up"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="aspect-video overflow-hidden relative">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute top-4 left-4 p-3 rounded-2xl bg-white/90 backdrop-blur-sm shadow-sm" style={{ color: 'var(--amber-primary)' }}>
-                  {service.icon}
+          {activeServices.map((service, index) => {
+            const hasLink = 'link' in service && service.link;
+            const CardWrapper = hasLink ? Link : 'div';
+            const cardProps = hasLink ? { to: service.link as string } : {};
+
+            return (
+              <CardWrapper
+                key={index}
+                {...cardProps as any}
+                className={`bg-white rounded-3xl transition-all duration-500 animate-fade-in-up overflow-hidden ${hasLink
+                    ? 'group cursor-pointer border-2  shadow-md hover:shadow-2xl hover:-translate-y-2 hover:border-amber-300'
+                    : 'border border-gray-100 shadow-sm opacity-95'
+                  }`}
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="aspect-video overflow-hidden relative">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className={`w-full h-full object-cover transition-transform duration-700 ${hasLink ? 'group-hover:scale-110' : ''}`}
+                  />
+                  <div className="absolute top-4 left-4 p-3 rounded-2xl bg-white/90 backdrop-blur-sm shadow-sm" style={{ color: 'var(--amber-primary)' }}>
+                    {service.icon}
+                  </div>
                 </div>
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-serif mb-4">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  {service.description}
-                </p>
-                <div className="flex flex-col gap-4">
-                  {'hasMenusLink' in service && service.hasMenusLink && (
-                    <div className="flex flex-wrap gap-2 mb-2">
-                      <Link
-                        to="/menus"
-                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-50 text-amber-900 text-sm font-bold hover:bg-amber-100 transition-colors border border-amber-200"
+                <div className="p-8">
+                  <h3 className="text-2xl font-serif mb-4">{service.title}</h3>
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    {service.description}
+                  </p>
+                  {hasLink && (
+                    <div className="flex flex-col gap-4">
+                      <span
+                        className="text-sm font-bold uppercase tracking-wider flex items-center gap-2 transition-colors group-hover:gap-3"
+                        style={{ color: 'var(--amber-primary)' }}
                       >
-                        <FileText size={16} />
-                        Guarda i nostri menù
-                      </Link>
+                        Scopri di più <span className="text-xl">→</span>
+                      </span>
                     </div>
                   )}
-                  <button
-                    className="text-sm font-bold uppercase tracking-wider flex items-center gap-2 transition-colors hover:gap-3"
-                    style={{ color: 'var(--amber-primary)' }}
-                  >
-                    Scopri di più <span className="text-xl">→</span>
-                  </button>
                 </div>
-              </div>
-            </div>
-          ))}
+              </CardWrapper>
+            );
+          })}
         </div>
 
         {wipServices.length > 0 && (
