@@ -11,7 +11,6 @@ import cateringImg from "@assets/gourmet_catering_exclusive_1767972610833.png";
 import consultancyImg from "@assets/service_consultancy.png";
 import merchandisingImg from "@assets/service_merchandising.png";
 import pastaMakingImg from "@assets/pasta_making_workshop_1767972558943.png";
-import homeChefImg from "@assets/private_dinner_home_chef_1767972575839.png";
 
 const activeServices = [
   {
@@ -21,23 +20,17 @@ const activeServices = [
     image: pastaMakingImg
   },
   {
-    title: "Eventi privati a domicilio",
+    title: "Eventi, feste, cene private a domicilio",
     description: "Esperienze gastronomiche intime ed esclusive nel nostro spazio.",
     icon: <Utensils className="w-6 h-6" />,
-    image: privateDinnerImg
+    image: privateDinnerImg,
+    link: "/menus"
   },
   {
     title: "Kids Party (Baby Lab)",
     description: "Laboratori educativi e sicuri per i più piccoli: preparazione di tramezzini, profiterole e altro.",
     icon: <Users className="w-6 h-6" />,
     image: kidsPartyImg
-  },
-  {
-    title: "Cene e feste a domicilio",
-    description: "Servizio chef per privati, portando l'alta cucina direttamente a casa vostra.",
-    icon: <Home className="w-6 h-6" />,
-    image: homeChefImg,
-    link: "/menus"
   },
   {
     title: "Catering",
@@ -96,8 +89,8 @@ export function Courses() {
                 key={index}
                 {...cardProps as any}
                 className={`bg-white rounded-3xl transition-all duration-500 animate-fade-in-up overflow-hidden ${hasLink
-                    ? 'group cursor-pointer border-2  shadow-md hover:shadow-2xl hover:-translate-y-2 hover:border-amber-300'
-                    : 'border border-gray-100 shadow-sm opacity-95'
+                  ? 'group cursor-pointer border-2  shadow-md hover:shadow-2xl hover:-translate-y-2 hover:border-amber-300'
+                  : 'border border-gray-100 shadow-sm opacity-95'
                   }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >

@@ -13,6 +13,8 @@ import { MenusPage } from './pages/MenusPage';
 import { HomeMenusSection } from './components/HomeMenusSection';
 import { GalleriaPage } from './pages/GalleriaPage';
 import { HomeGallerySection } from './components/HomeGallerySection';
+import { Analytics } from "@vercel/analytics/next"
+
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -27,6 +29,7 @@ function ScrollToTop() {
 function HomePage() {
   return (
     <main className='mt-20'>
+      <Analytics />
       <Hero />
       <Courses />
       <HomeMenusSection />
