@@ -50,13 +50,13 @@ export function Footer() {
             <h4 className="mb-4">Seguici</h4>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/nanfy_lab"
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-[var(--amber-primary)] transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/chefgiacomonanfaro89"
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-800 hover:bg-[var(--amber-primary)] transition-colors"
               >
                 <Facebook className="w-5 h-5" />

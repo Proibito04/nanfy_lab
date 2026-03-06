@@ -40,7 +40,7 @@ export function LinkTreePage() {
           </a>
 
           <a
-            href="/"
+            href="https://www.facebook.com/chefgiacomonanfaro89"
             className="w-full flex items-center justify-center gap-3 bg-gray-800 hover:bg-[var(--amber-primary)] text-white p-4 rounded-xl transition-all duration-300 hover:-translate-y-1 shadow-lg"
           >
             <Globe className="w-6 h-6" />
