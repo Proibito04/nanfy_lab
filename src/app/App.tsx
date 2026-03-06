@@ -5,7 +5,7 @@ import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Courses } from './components/Courses';
 import { ChefBio } from './components/ChefBio';
-import { Gallery } from './components/Gallery';
+
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { Toaster } from './components/ui/sonner';
@@ -26,9 +26,15 @@ function ScrollToTop() {
   return null;
 }
 
+import { Helmet } from 'react-helmet-async';
+
 function HomePage() {
   return (
     <main className='mt-20'>
+      <Helmet>
+        <title>Nanfylab | Corsi di Cucina, Chef a Domicilio, Eventi Privati</title>
+        <meta name="description" content="Scopri Nanfylab: corsi di cucina, chef a domicilio ed eventi privati. Passione e convivialità per le tue esperienze culinarie uniche." />
+      </Helmet>
       <Analytics />
       <Hero />
       <Courses />

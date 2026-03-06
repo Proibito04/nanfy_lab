@@ -1,10 +1,15 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { Gallery } from '../components/Gallery';
 
 export function GalleriaPage() {
   return (
     <main className="min-h-screen bg-amber-50/20 pt-32 pb-24">
+      <Helmet>
+        <title>Galleria | Nanfylab</title>
+        <meta name="description" content="Esplora la galleria di Nanfylab: scopri le foto dei nostri piatti, eventi e corsi di cucina." />
+      </Helmet>
       <div className="max-w-7xl mx-auto px-6 mb-8">
         <Link
           to="/"

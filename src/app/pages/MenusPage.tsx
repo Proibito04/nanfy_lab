@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft, FileText, Download, UtensilsCrossed } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
@@ -35,6 +36,10 @@ const menus = [
 export function MenusPage() {
   return (
     <main className="min-h-screen bg-amber-50/20 pt-32 pb-24">
+      <Helmet>
+        <title>Menù | Nanfylab</title>
+        <meta name="description" content="Scopri le nostre proposte gastronomiche per i tuoi eventi privati a domicilio. Scegli il percorso di degustazione perfetto per la tua occasione speciale." />
+      </Helmet>
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Navigation / Header */}

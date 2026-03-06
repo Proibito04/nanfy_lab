@@ -1,4 +1,5 @@
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
+import { neon } from "@neondatabase/serverless";
 
 const ses = new SESClient({
   region: process.env.AWS_REGION,
@@ -130,14 +131,44 @@ export default async function handler(req: any, res: any) {
       ReplyToAddresses: [SENDER],
     });
 
+    // 3. Save to Neon Database
+    // We expect DATABASE_URL env variable to be set by Vercel Postgres/Neon integration
+    let dbPromise = Promise.resolve();
+    if (process.env.DATABASE_URL) {
+      const sql = neon(process.env.DATABASE_URL);
+      dbPromise = (async () => {
+        // Create table if not exists (runs quickly if already exists)
+        await sql\`
+          CREATE TABLE IF NOT EXISTS contacts (
+            id SERIAL PRIMARY KEY,
+            name VARCHAR(255) NOT NULL,
+            email VARCHAR(255) NOT NULL,
+            phone VARCHAR(50),
+            course VARCHAR(255),
+            message TEXT NOT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+          )
+        \`;
+
+        // Insert contact data
+        await sql\`
+          INSERT INTO contacts (name, email, phone, course, message)
+          VALUES (\${name}, \${email}, \${phone || null}, \${course || null}, \${message})
+        \`;
+      })();
+    } else {
+      console.warn("DATABASE_URL non impostato. Salvataggio nel DB saltato.");
+    }
+
     await Promise.all([
       ses.send(adminCommand),
       ses.send(userCommand),
+      dbPromise,
     ]);
 
-    return res.status(200).json({ message: "Messaggio inviato con successo!" });
+    return res.status(200).json({ message: "Messaggio inviato con successo e salvato!" });
   } catch (error: any) {
-    console.error("SES Error:", error);
-    return res.status(500).json({ message: "Errore durante l'invio del messaggio. Riprova più tardi.", error: error.message });
+    console.error("Errore (SES o DB):", error);
+    return res.status(500).json({ message: "Errore durante l'elaborazione della richiesta. Riprova più tardi.", error: error.message });
   }
 }
