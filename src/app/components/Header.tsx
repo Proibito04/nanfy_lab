@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import logo from "@assets/logo_senza_cerchio.png";
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -58,24 +58,36 @@ export function Header() {
         <div className=" mx-auto px-6 py-4">
           <div className="flex items-center justify-between gap-10">
             <div className="flex items-center space-x-3">
-              <img
-                src={logo}
-                alt="Nanfy_Lab Academy"
-                className="h-16 w-auto"
-              />
+              <Link to={"/"}>
+                <img
+                  src={logo}
+                  alt="Nanfy_Lab Academy"
+                  className="h-16 w-auto"
+                />
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              {navItems.map((item) => (
-                <button
-                  key={item.label}
-                  onClick={() => handleNavClick(item.href)}
-                  className="text-gray-700 hover:text-amber-600 transition-colors"
-                >
-                  {item.label}
-                </button>
-              ))}
+              {navItems.map((item) => {
+                const isHash = item.href.startsWith('#');
+                const linkHref = isHash && location.pathname !== '/' ? '/' + item.href : item.href;
+                return (
+                  <Link
+                    key={item.label}
+                    to={linkHref}
+                    onClick={(e) => {
+                      if (e.button === 0 && !e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey) {
+                        e.preventDefault();
+                        handleNavClick(item.href);
+                      }
+                    }}
+                    className="text-gray-700 hover:text-amber-600 transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
             </nav>
 
             <button
@@ -107,15 +119,25 @@ export function Header() {
         <div className="fixed inset-0 z-40 md:hidden">
           <div className="absolute inset-0 bg-black/50" onClick={() => setIsMobileMenuOpen(false)} />
           <nav className="absolute top-20 right-6 left-6 bg-white rounded-2xl shadow-xl p-6 space-y-4">
-            {navItems.map((item) => (
-              <button
-                key={item.label}
-                onClick={() => handleNavClick(item.href)}
-                className="block w-full text-left py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors"
-              >
-                {item.label}
-              </button>
-            ))}
+            {navItems.map((item) => {
+              const isHash = item.href.startsWith('#');
+              const linkHref = isHash && location.pathname !== '/' ? '/' + item.href : item.href;
+              return (
+                <Link
+                  key={item.label}
+                  to={linkHref}
+                  onClick={(e) => {
+                    if (e.button === 0 && !e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey) {
+                      e.preventDefault();
+                      handleNavClick(item.href);
+                    }
+                  }}
+                  className="block w-full text-left py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors"
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
             <button
               className="w-full px-6 py-3 rounded-full text-white transition-all hover:opacity-90"
               style={{ backgroundColor: 'var(--amber-primary)' }}

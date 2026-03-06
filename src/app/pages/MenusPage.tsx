@@ -1,37 +1,44 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft, FileText, Download, UtensilsCrossed } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
-
-import menuBambini from "@assets/menu-bambini.pdf";
-import menuColazioneSabauda from "@assets/menu-colazione-sabauda.pdf";
-import menuMare from "@assets/menu-mare.pdf";
+import menuColazioneSabauda from "@assets/menus/menu_colazione_sabauda.pdf";
+import menuMare from "@assets/menus/manuOndeDelMare.pdf";
+import menuCarte from "@assets/menus/menu_a_la_carte.pdf";
+import menuViaggiatore from "@assets/menus/menu_viaggiatore.pdf";
 import privateDinnerImg from "@assets/service_private_dinner.png";
+
 
 const menus = [
   {
     id: 'sabauda',
     title: 'Colazione Sabauda',
-    description: 'Un risveglio aristocratico con i sapori storici del Piemonte, tra dolcezze e sfumature salate raffinate.',
+    description: 'Un risveglio regale tra i sapori storici del Piemonte, con una selezione di dolcezze artigianali e ricercatezze salate.',
     url: menuColazioneSabauda,
-    tag: 'Novità'
+    tag: 'Tradizione'
   },
   {
     id: 'mare',
-    title: 'Menù Mare',
-    description: 'Un tuffo nei sapori del Mediterraneo, con pescato freschissimo e abbinamenti sorprendenti.',
+    title: 'Onde del Mare',
+    description: "L'essenza del Mediterraneo in tavola: pescato freschissimo e accostamenti creativi che profumano di salsedine.",
     url: menuMare,
-    tag: 'Classico'
+    tag: 'Specialità'
   },
   {
-    id: 'bambini',
-    title: 'Menù Bambini',
-    description: 'Piatti sani, colorati e gustosi, pensati appositamente per i palati dei più piccoli.',
-    url: menuBambini,
-    tag: 'Speciale'
+    id: 'carte',
+    title: 'Menù à la Carte',
+    description: "La nostra proposta stagionale più autentica, dove la qualità delle materie prime incontra l'estro dello chef.",
+    url: menuCarte,
+    tag: 'Stagionale'
+  },
+  {
+    id: 'viaggiatore',
+    title: 'Menù del Viaggiatore',
+    description: 'Un itinerario gastronomico senza confini, un mix di culture e sapori pensato per chi ama esplorare nuovi orizzonti.',
+    url: menuViaggiatore,
+    tag: 'Esperienza'
   }
 ];
+
 
 export function MenusPage() {
   return (

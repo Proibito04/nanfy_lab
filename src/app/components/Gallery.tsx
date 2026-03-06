@@ -13,7 +13,7 @@ const imagesData = Object.entries(imagesRecord).map(([path, module]) => {
   };
 });
 
-const categories = ['tutti', 'corsi', 'piatti', 'ravioli'];
+const categories = ['tutti', 'corsi', 'piatti', 'eventi privati'];
 
 export function Gallery() {
   const [activeCategory, setActiveCategory] = useState('tutti');
