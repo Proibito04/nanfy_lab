@@ -13,6 +13,7 @@ import { MenusPage } from './pages/MenusPage';
 import { HomeMenusSection } from './components/HomeMenusSection';
 import { GalleriaPage } from './pages/GalleriaPage';
 import { HomeGallerySection } from './components/HomeGallerySection';
+import { LinkTreePage } from './pages/LinkTreePage';
 import { Analytics } from "@vercel/analytics/react"
 
 
@@ -86,6 +87,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/menus" element={<MenusPage />} />
         <Route path="/galleria" element={<GalleriaPage />} />
+        <Route path="/links" element={<LinkTreePage />} />
       </Routes>
       <Footer />
       <Toaster position="top-center" />
