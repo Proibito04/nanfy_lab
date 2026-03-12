@@ -22,8 +22,8 @@ export function Hero() {
               Nanfy Lab
             </div> */}
             <h1 className="text-5xl md:text-7xl leading-tight font-serif ">
-              <span className="italic block" style={{ color: 'var(--amber-primary)' }}>Nanfy Lab</span>
-              <span>Laboratorio in evoluzione</span>
+              <span className="italic block font-segoe" style={{ color: 'var(--amber-primary)' }}>Nanfy Lab</span>
+              <span className="font-segoe">Laboratorio in evoluzione</span>
             </h1>
             <div className="flex gap-4 text-gray-500 font-medium tracking-wide uppercase text-sm">
               <span>- cucina</span>

@@ -35,6 +35,30 @@ function HomePage() {
       <Helmet>
         <title>Nanfylab | Corsi di Cucina, Chef a Domicilio, Eventi Privati</title>
         <meta name="description" content="Scopri Nanfylab: corsi di cucina, chef a domicilio ed eventi privati. Passione e convivialità per le tue esperienze culinarie uniche." />
+        <link rel="canonical" href="https://www.nanfylab.it/" />
+        
+        <meta property="og:title" content="Nanfylab | Corsi di Cucina, Chef a Domicilio, Eventi Privati" />
+        <meta property="og:description" content="Scopri Nanfylab: corsi di cucina, chef a domicilio ed eventi privati." />
+        <meta property="og:url" content="https://www.nanfylab.it/" />
+        <meta property="og:type" content="website" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Nanfylab | Corsi di Cucina, Chef a Domicilio" />
+        <meta name="twitter:description" content="Scopri Nanfylab: corsi di cucina, chef a domicilio ed eventi privati." />
+        
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "FoodEstablishment",
+              "name": "Nanfylab",
+              "description": "Corsi di cucina, chef a domicilio ed eventi privati a cura dello Chef Giacomo Nanfaro.",
+              "url": "https://www.nanfylab.it/",
+              "servesCuisine": "Italian",
+              "areaServed": "Italy"
+            }
+          `}
+        </script>
       </Helmet>
       <Analytics />
       <Hero />

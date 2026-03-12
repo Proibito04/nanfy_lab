@@ -9,6 +9,10 @@ export function GalleriaPage() {
       <Helmet>
         <title>Galleria | Nanfylab</title>
         <meta name="description" content="Esplora la galleria di Nanfylab: scopri le foto dei nostri piatti, eventi e corsi di cucina." />
+        <link rel="canonical" href="https://www.nanfylab.it/galleria" />
+        <meta property="og:title" content="Galleria | Nanfylab" />
+        <meta property="og:description" content="Esplora la galleria di Nanfylab: piatti, eventi e corsi di cucina." />
+        <meta property="og:url" content="https://www.nanfylab.it/galleria" />
       </Helmet>
       <div className="max-w-7xl mx-auto px-6 mb-8">
         <Link

@@ -8,6 +8,10 @@ export function LinkTreePage() {
       <Helmet>
         <title>Nanfylab | I nostri Link</title>
         <meta name="description" content="Tutti i link utili di Nanfylab: Instagram, Facebook e sito web ufficiale." />
+        <link rel="canonical" href="https://www.nanfylab.it/links" />
+        <meta property="og:title" content="Nanfylab | I nostri Link" />
+        <meta property="og:description" content="Tutti i link utili di Nanfylab." />
+        <meta property="og:url" content="https://www.nanfylab.it/links" />
       </Helmet>
       <div className="w-full max-w-md pt-10 flex flex-col items-center">
         <img

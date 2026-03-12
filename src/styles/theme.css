@@ -55,6 +55,7 @@
   /* Typography */
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
+  --font-segoe: 'Segoe Print', cursive;
 }
 
 .dark {
@@ -95,6 +96,7 @@
 }
 
 @theme inline {
+  --font-segoe: "Segoe Print", cursive;
   --color-brand-50: #f6f9f5;
   --color-brand-100: #edf2eb;
   --color-brand-200: #d8e5d5;

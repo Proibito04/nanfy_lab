@@ -5,6 +5,8 @@ import menuColazioneSabauda from "@assets/menus/menu_colazione_sabauda.pdf";
 import menuMare from "@assets/menus/manuOndeDelMare.pdf";
 import menuCarte from "@assets/menus/menu_a_la_carte.pdf";
 import menuViaggiatore from "@assets/menus/menu_viaggiatore.pdf";
+import menuTorino from "@assets/menus/menu_a_torino.pdf";
+import menuBrunch from "@assets/menus/menu_brunch.pdf";
 import privateDinnerImg from "@assets/service_private_dinner.png";
 
 
@@ -36,6 +38,20 @@ const menus = [
     description: 'Un itinerario gastronomico senza confini, un mix di culture e sapori pensato per chi ama esplorare nuovi orizzonti.',
     url: menuViaggiatore,
     tag: 'Esperienza'
+  },
+  {
+    id: 'torino',
+    title: 'Menù a Torino',
+    description: 'Un omaggio alla tradizione gastronomica torinese: sfiziosità e sapori classici che raccontano la storia ed il gusto della città.',
+    url: menuTorino,
+    tag: 'Territorio'
+  },
+  {
+    id: 'brunch',
+    title: 'Menù Brunch',
+    description: 'Il connubio perfetto tra dolcezze e sapori salati, ideale per regalarsi un weekend di relax e convivialità in buona compagnia.',
+    url: menuBrunch,
+    tag: 'Relax'
   }
 ];
 
@@ -46,6 +62,10 @@ export function MenusPage() {
       <Helmet>
         <title>Menù | Nanfylab</title>
         <meta name="description" content="Scopri le nostre proposte gastronomiche per i tuoi eventi privati a domicilio. Scegli il percorso di degustazione perfetto per la tua occasione speciale." />
+        <link rel="canonical" href="https://www.nanfylab.it/menus" />
+        <meta property="og:title" content="Menù | Nanfylab" />
+        <meta property="og:description" content="Scopri le nostre proposte gastronomiche per eventi privati a domicilio." />
+        <meta property="og:url" content="https://www.nanfylab.it/menus" />
       </Helmet>
       <div className="max-w-7xl mx-auto px-6">
 
