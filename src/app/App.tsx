@@ -29,6 +29,8 @@ function ScrollToTop() {
 
 import { Helmet } from 'react-helmet-async';
 
+import { KidsCourses } from './components/KidsCourses';
+
 function HomePage() {
   return (
     <main className='mt-20'>
@@ -63,6 +65,7 @@ function HomePage() {
       <Analytics />
       <Hero />
       <Courses />
+      <KidsCourses />
       <HomeMenusSection />
       <ChefBio />
       <About />
