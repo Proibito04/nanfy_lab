@@ -14,6 +14,8 @@ import { HomeMenusSection } from './components/HomeMenusSection';
 import { GalleriaPage } from './pages/GalleriaPage';
 import { HomeGallerySection } from './components/HomeGallerySection';
 import { LinkTreePage } from './pages/LinkTreePage';
+import { KidsLabPage } from './pages/KidsLabPage';
+import { AdultCoursesPage } from './pages/AdultCoursesPage';
 import { Analytics } from "@vercel/analytics/react"
 
 
@@ -30,6 +32,8 @@ function ScrollToTop() {
 import { Helmet } from 'react-helmet-async';
 
 import { KidsCourses } from './components/KidsCourses';
+import { AdultCourses } from './components/AdultCourses';
+
 
 function HomePage() {
   return (
@@ -65,7 +69,6 @@ function HomePage() {
       <Analytics />
       <Hero />
       <Courses />
-      <KidsCourses />
       <HomeMenusSection />
       <ChefBio />
       <About />
@@ -112,7 +115,9 @@ export default function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/menus" element={<MenusPage />} />
+        <Route path="/menu" element={<MenusPage />} />
+        <Route path="/laboratorio-bimbi" element={<KidsLabPage />} />
+        <Route path="/corsi-per-adulti" element={<AdultCoursesPage />} />
         <Route path="/galleria" element={<GalleriaPage />} />
         <Route path="/links" element={<LinkTreePage />} />
       </Routes>

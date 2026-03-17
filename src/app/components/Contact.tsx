@@ -167,14 +167,14 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="course" className="block mb-2">Corso di Interesse</label>
+                <label htmlFor="course" className="block mb-2">Servizio di Interesse</label>
                 <input
                   type="text"
                   id="course"
                   value={formData.course}
                   onChange={(e) => setFormData({ ...formData, course: e.target.value })}
                   className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[var(--amber-primary)] focus:ring-2 focus:ring-[var(--amber-lighter)] transition-all"
-                  placeholder="Inserisci il nome del corso"
+                  placeholder="Inserisci il nome del servizio"
                 />
               </div>
 

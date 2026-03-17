@@ -45,7 +45,7 @@ const getAdminTemplate = (data: any) => `
         <div class="value">${data.phone || 'Non specificato'}</div>
       </div>
       <div class="field">
-        <div class="label">Corso di interesse:</div>
+        <div class="label">Servizio di interesse:</div>
         <div class="value">${data.course || 'Non specificato'}</div>
       </div>
       <div class="field">

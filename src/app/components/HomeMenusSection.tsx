@@ -28,7 +28,7 @@ export function HomeMenusSection() {
                 <ChefHat className="w-6 h-6" />
               </div>
               <div>
-                <p className="text-sm font-bold text-gray-900 uppercase tracking-wide">3 Percorsi</p>
+                <p className="text-sm font-bold text-gray-900 uppercase tracking-wide">Percorsi</p>
                 <p className="text-xs text-gray-500">Degustazione</p>
               </div>
             </div>
@@ -42,10 +42,10 @@ export function HomeMenusSection() {
             <div className="w-20 h-1 bg-amber-500 mb-8 rounded-full"></div>
 
             <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-              Dall'intima cena a due fino all'evento speciale in famiglia. Abbiamo studiato tre percorsi di degustazione per portare l'alta cucina direttamente sulla tua tavola.
+              Dall'intima cena a due fino all'evento speciale in famiglia. Abbiamo studiato percorsi di degustazione per portare l'alta cucina direttamente sulla tua tavola.
             </p>
 
-            <ul className="space-y-4 mb-10">
+            {/* <ul className="space-y-4 mb-10">
               <li className="flex items-start gap-3">
                 <div className="mt-1 w-6 h-6 rounded-full bg-amber-100 text-amber-900 flex flex-shrink-0 items-center justify-center">
                   <span className="text-sm font-bold">1</span>
@@ -73,7 +73,7 @@ export function HomeMenusSection() {
                   <p className="text-gray-600">Genuinità e sapore pensati per i più piccoli.</p>
                 </div>
               </li>
-            </ul>
+            </ul> */}
 
             <Link
               to="/menus"

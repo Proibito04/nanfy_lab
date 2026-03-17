@@ -21,9 +21,9 @@ export function Hero() {
             {/* <div className="inline-block px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: 'var(--amber-lighter)', color: 'var(--amber-primary)' }}>
               Nanfy Lab
             </div> */}
-            <h1 className="text-5xl md:text-7xl leading-tight font-serif ">
-              <span className="italic block font-segoe" style={{ color: 'var(--amber-primary)' }}>Nanfy Lab</span>
-              <span className="font-segoe">Laboratorio in evoluzione</span>
+            <h1 className=" leading-tight font-serif ">
+              <span className="italic block font-segoe text-5xl md:text-7xl" style={{ color: 'var(--amber-primary)' }}>Nanfy Lab</span>
+              <span className="font-segoe text-black">Laboratorio in evoluzione</span>
             </h1>
             <div className="flex gap-4 text-gray-500 font-medium tracking-wide uppercase text-sm">
               <span>- cucina</span>

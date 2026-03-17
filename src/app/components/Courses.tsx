@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { ChefHat, Utensils, Briefcase, Play, Home, MapPin, Truck, Users, ShoppingBag, MessageSquare, GraduationCap } from 'lucide-react';
 import cookingClassImg from "@assets/service_cooking_class.png";
 import privateDinnerImg from "@assets/service_private_dinner.png";
 import videoCoursesImg from "@assets/service_video_courses.png";
@@ -11,6 +10,8 @@ import cateringImg from "@assets/gourmet_catering_exclusive_1767972610833.png";
 import consultancyImg from "@assets/service_consultancy.png";
 import merchandisingImg from "@assets/service_merchandising.png";
 import pastaMakingImg from "@assets/pasta_making_workshop_1767972558943.png";
+import giftCardImg from "@assets/service_gift_card.png";
+import { ChefHat, Utensils, Briefcase, Play, Home, MapPin, Truck, Users, ShoppingBag, MessageSquare, GraduationCap, Gift } from 'lucide-react';
 
 const activeServices = [
   {
@@ -20,29 +21,31 @@ const activeServices = [
     image: pastaMakingImg
   },
   {
+    title: "Corsi Home Lab",
+    description: "Corsi di cucina per adulti: dalla pasta fresca al sushi tradizionale, impara le tecniche dai professionisti.",
+    icon: <ChefHat className="w-6 h-6" />,
+    image: cookingClassImg,
+    link: "/corsi-per-adulti"
+  },
+  {
     title: "Eventi, feste, cene private a domicilio",
     description: "Esperienze gastronomiche intime ed esclusive nel nostro spazio.",
     icon: <Utensils className="w-6 h-6" />,
     image: privateDinnerImg,
-    link: "/menus"
+    link: "/menu"
   },
   {
-    title: "Kids Party (Baby Lab)",
+    title: "Kids Lab",
     description: "Laboratori educativi e sicuri per i più piccoli: preparazione di tramezzini, profiterole e altro.",
     icon: <Users className="w-6 h-6" />,
-    image: kidsPartyImg
+    image: kidsPartyImg,
+    link: "/laboratorio-bimbi"
   },
   {
-    title: "Catering",
+    title: "Catering e Cene in location",
     description: "Servizio professionale per eventi e cerimonie di ogni tipo, con menu personalizzati.",
     icon: <Truck className="w-6 h-6" />,
     image: cateringImg
-  },
-  {
-    title: "Cene in Location",
-    description: "Eventi in collaborazione con spazi esterni e location esclusive e suggestive.",
-    icon: <MapPin className="w-6 h-6" />,
-    image: kitchenStudioImg
   },
   {
     title: "Team building",
@@ -50,14 +53,18 @@ const activeServices = [
     icon: <Briefcase className="w-6 h-6" />,
     image: teamBuildingImg
   },
+  {
+    title: "Gift Card",
+    description: "Regala un'esperienza culinaria indimenticabile a chi ami con le nostre Gift Card personalizzate.",
+    icon: <Gift className="w-6 h-6" />,
+    image: giftCardImg
+  },
 ];
 
 const wipServices = [
-  { title: "Corsi Home Lab", icon: <ChefHat className="w-5 h-5" />, image: cookingClassImg },
   { title: "Video Corsi", icon: <Play className="w-5 h-5" />, image: videoCoursesImg },
   { title: "Merchandising", icon: <ShoppingBag className="w-5 h-5" />, image: merchandisingImg },
   { title: "Consulenze", icon: <MessageSquare className="w-5 h-5" />, image: consultancyImg },
-  { title: "Corsi Professionalizzanti", icon: <GraduationCap className="w-5 h-5" />, image: kitchenStudioImg },
   {
     title: "Prodotti nanfy lab",
     description: "Una selezione esclusiva di ingredienti e accessori firmati Nanfy Lab per la tua cucina.",
