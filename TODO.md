@@ -1,0 +1,1 @@
+- togliere la foto da ai a gallaria

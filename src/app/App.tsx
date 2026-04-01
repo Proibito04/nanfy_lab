@@ -16,15 +16,24 @@ import { HomeGallerySection } from './components/HomeGallerySection';
 import { LinkTreePage } from './pages/LinkTreePage';
 import { KidsLabPage } from './pages/KidsLabPage';
 import { AdultCoursesPage } from './pages/AdultCoursesPage';
+import { NotFoundPage } from './pages/NotFoundPage';
 import { Analytics } from "@vercel/analytics/react"
 
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (!hash) {
+      window.scrollTo(0, 0);
+    } else {
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'auto' });
+      }
+    }
+  }, [pathname, hash]);
 
   return null;
 }
@@ -115,11 +124,12 @@ export default function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/menu" element={<MenusPage />} />
+        <Route path="/menus" element={<MenusPage />} />
         <Route path="/laboratorio-bimbi" element={<KidsLabPage />} />
         <Route path="/corsi-per-adulti" element={<AdultCoursesPage />} />
         <Route path="/galleria" element={<GalleriaPage />} />
         <Route path="/links" element={<LinkTreePage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
       <Toaster position="top-center" />

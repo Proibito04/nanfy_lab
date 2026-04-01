@@ -1,10 +1,23 @@
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import { useState } from 'react';
 import natureBackground from "@assets/1dc5f631f35b3a6d410673a2b209c76520a8df65.png";
 import { toast } from 'sonner';
 
 export function Contact() {
+  const { hash } = useLocation();
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (hash === '#contact') {
+      const emailInput = document.getElementById('email');
+      if (emailInput) {
+        setTimeout(() => {
+          emailInput.focus();
+        }, 800); // More delay for cross-page navigation and smooth scroll
+      }
+    }
+  }, [hash]);
   const [formData, setFormData] = useState({
     name: '',
     email: '',

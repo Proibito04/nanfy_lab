@@ -18,10 +18,11 @@ const activeServices = [
     title: "Corsi a domicilio",
     description: "Lezioni private presso il cliente per un'esperienza personalizzata e comoda.",
     icon: <Home className="w-6 h-6" />,
-    image: pastaMakingImg
+    image: pastaMakingImg,
+    link: "/corsi-per-adulti"
   },
   {
-    title: "Corsi Home Lab",
+    title: "Corsi In Lab",
     description: "Corsi di cucina per adulti: dalla pasta fresca al sushi tradizionale, impara le tecniche dai professionisti.",
     icon: <ChefHat className="w-6 h-6" />,
     image: cookingClassImg,

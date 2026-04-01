@@ -28,7 +28,17 @@ export function Header() {
 
   const handleNavClick = (href: string) => {
     if (href === '#purchase') {
-      alert('🛒 Carrello: Il corso è stato aggiunto! Procedi al pagamento sicuro (Mock).');
+      if (location.pathname !== '/') {
+        navigate('/#contact');
+      } else {
+        const element = document.querySelector('#contact');
+        element?.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+          const emailInput = document.getElementById('email');
+          emailInput?.focus();
+        }, 500); // Wait for scroll to finish
+      }
+      setIsMobileMenuOpen(false);
       return;
     }
 
