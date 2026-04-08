@@ -1,6 +1,12 @@
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 import { neon } from "@neondatabase/serverless";
 
+/**
+ * Contact Form API Handler
+ * Note: The frontend currently sends data here AND redirects the user to WhatsApp
+ * for direct communication after a successful API call.
+ */
+
 const ses = new SESClient({
   region: process.env.AWS_REGION,
   credentials: {

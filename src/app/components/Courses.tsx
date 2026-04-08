@@ -11,7 +11,8 @@ import consultancyImg from "@assets/service_consultancy.png";
 import merchandisingImg from "@assets/service_merchandising.png";
 import pastaMakingImg from "@assets/pasta_making_workshop_1767972558943.png";
 import giftCardImg from "@assets/service_gift_card.png";
-import { ChefHat, Utensils, Briefcase, Play, Home, MapPin, Truck, Users, ShoppingBag, MessageSquare, GraduationCap, Gift } from 'lucide-react';
+import mealPrepImg from "@assets/corsi/meal_prep.jpeg"
+import { ChefHat, Utensils, Briefcase, Play, Home, MapPin, Truck, Users, ShoppingBag, MessageSquare, GraduationCap, Gift, Calendar } from 'lucide-react';
 
 const activeServices = [
   {
@@ -43,8 +44,14 @@ const activeServices = [
     link: "/laboratorio-bimbi"
   },
   {
+    title: "Meal Prep",
+    description: "Impara a pianificare e preparare i pasti della settimana in anticipo, per un'alimentazione sana, bilanciata e senza stress.",
+    icon: <Calendar className="w-6 h-6" />,
+    image: mealPrepImg,
+  },
+  {
     title: "Catering e Cene in location",
-    description: "Servizio professionale per eventi e cerimonie di ogni tipo, con menu personalizzati.",
+    description: "Con NANFY_LAB la cucina diventa il linguaggio attraverso il quale raccontiamo territorio, stagioni e passione per le cose fatte bene. Che si tratti di una cena privata, un evento speciale o una ricorrenza da celebrare, NANFY_LAB porta la cucina dove vuoi tu, trasformando ogni tavola in un piccolo viaggio gastronomico",
     icon: <Truck className="w-6 h-6" />,
     image: cateringImg
   },

@@ -9,7 +9,7 @@ const signatureDishes = [
   { img: risottoImg, title: "Risotto Contemporaneo", description: "Riso Carnaroli, zafferano in pistilli e oro edibile." },
   { img: pastaImg, title: "Pasta Fresca Artigianale", description: "Tagliatelle all'uovo tirate a mano con ragù bianco." },
   { img: dinnerImg, title: "Cena Privata Exclusive", description: "Menu degustazione personalizzato in location privata." },
-  { img: cateringImg, title: "Gourmet Catering", description: "Finger food creativi per eventi aziendali e privati." },
+  { img: cateringImg, title: "Gourmet Catering", description: "Con NANFY_LAB la cucina diventa il linguaggio attraverso il quale raccontiamo territorio, stagioni e passione per le cose fatte bene. Che si tratti di una cena privata, un evento speciale o una ricorrenza da celebrare, NANFY_LAB porta la cucina dove vuoi tu, trasformando ogni tavola in un piccolo viaggio gastronomico" },
 ];
 
 export function ChefBio() {
